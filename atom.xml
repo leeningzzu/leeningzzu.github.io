@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>StatLee on the way</title>
+  
+  <subtitle>Knowledge is Power</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://leeningzzu.github.io/"/>
+  <updated>2018-06-20T09:46:31.598Z</updated>
+  <id>https://leeningzzu.github.io/</id>
+  
+  <author>
+    <name>Ning Lee</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://leeningzzu.github.io/2018/06/20/hello-world/"/>
+    <id>https://leeningzzu.github.io/2018/06/20/hello-world/</id>
+    <published>2018-06-20T14:49:57.937Z</published>
+    <updated>2018-06-20T09:46:31.598Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>R 学习</title>
+    <link href="https://leeningzzu.github.io/2018/06/20/R-%E5%AD%A6%E4%B9%A0/"/>
+    <id>https://leeningzzu.github.io/2018/06/20/R-学习/</id>
+    <published>2018-06-20T10:20:11.000Z</published>
+    <updated>2018-06-20T11:07:17.369Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;1-数字&quot;&gt;&lt;a href=&quot;#1-数字&quot; class=&quot;headerlink&quot; title=&quot;1. 数字&quot;&gt;&lt;/a&gt;1. 数字&lt;/h4&gt;&lt;p&gt; 我们&lt;/p&gt;
+&lt;h4 id=&quot;2-变量&quot;&gt;&lt;a href=&quot;#2-变量&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
