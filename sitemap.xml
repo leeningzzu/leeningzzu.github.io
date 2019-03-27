@@ -3,17 +3,12 @@
 
     <sitemap>
         <loc>https://github.com/leeningzzu/leeningzzu.github.io/post-sitemap.xml</loc>
-        <lastmod>2019-03-07T17:32:12.317Z</lastmod>
+        <lastmod>2018-06-20T11:07:17.369Z</lastmod>
     </sitemap>
 
     <sitemap>
         <loc>https://github.com/leeningzzu/leeningzzu.github.io/page-sitemap.xml</loc>
         <lastmod>2019-03-07T18:19:48.835Z</lastmod>
-    </sitemap>
-
-    <sitemap>
-        <loc>https://github.com/leeningzzu/leeningzzu.github.io/tag-sitemap.xml</loc>
-        <lastmod>2017-09-24T04:40:20.000Z</lastmod>
     </sitemap>
 
 </sitemapindex>
