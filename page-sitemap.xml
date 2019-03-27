@@ -7,6 +7,20 @@
     </url>
     
     <url>
+        <loc>https://github.com/leeningzzu/leeningzzu.github.io/tags/</loc>
+        <lastmod>2019-03-27T08:01:00.548Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://github.com/leeningzzu/leeningzzu.github.io/archive/</loc>
+        <lastmod>2019-03-27T07:58:42.649Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>https://github.com/leeningzzu/leeningzzu.github.io/bbs/</loc>
         <lastmod>2019-03-07T18:19:48.835Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -22,20 +36,6 @@
     
     <url>
         <loc>https://github.com/leeningzzu/leeningzzu.github.io/about/</loc>
-        <lastmod>2017-09-24T04:40:20.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://github.com/leeningzzu/leeningzzu.github.io/archive/</loc>
-        <lastmod>2017-09-24T04:40:20.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://github.com/leeningzzu/leeningzzu.github.io/tags/</loc>
         <lastmod>2017-09-24T04:40:20.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
