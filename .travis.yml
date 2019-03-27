@@ -1,0 +1,17 @@
+language: node_js
+node_js:  stable
+branches:
+  only:
+  - master # whatever you want
+
+install: npm install
+
+before_script:
+- git config --global user.name "leeningzzu"
+- git config --global user.email "leeningzzu@gmail.com"
+- sed -i "s~https://github.com/leeningzzu/leeningzzu.github.io.git~http://${github_access_token}@github.com/leeningzzu/leeningzzu.github.io.git~" _config.yml
+
+script: npm run build
+
+after_success:
+- hexo deploy
