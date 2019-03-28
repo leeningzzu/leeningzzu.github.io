@@ -35,28 +35,6 @@
                     </li>
                 <% } %>
 
-                <% if (config.weibo_username) { %>
-                    <li>
-                        <a target="_blank" href="http://weibo.com/<%= config.weibo_username %>">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                <% } %>
-
-                <% if (config.facebook_username) { %>
-                    <li>
-                        <a target="_blank" href="https://www.facebook.com/<%= config.facebook_username %>">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                <% } %>
-
                 <% if (config.github_username) { %>
                     <li>
                         <a target="_blank"  href="https://github.com/<%= config.github_username %>">
@@ -78,13 +56,24 @@
                         </a>
                     </li>
                 <% } %>
-
-                <% if (config.linkedin_username) { %>
+                             
+                <% if (config.email) { %>
                     <li>
-                        <a target="_blank"  href="https://www.linkedin.com/in/<%= config.linkedin_username %>">
+                        <a target="_blank" href="mailto:<%= config.email_username %>">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                <% } %>
+
+                <% if (config.tele_username) { %>
+                    <li>
+                        <a target="_blank"  href="https://t.me/<%= config.tele_username %>">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-paper-plane fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
@@ -97,7 +86,7 @@
                 <p class="copyright text-muted">
                     <a><img alt="web trackers" src="http://monster.gostats.com/bin/count/a_507303/t_6/i_1/counter.png"
                     style="border-width:0" /></ a>
-                    vistors since 2019/03/01,
+                    Since 2019/01/01,
                     <span class="post-count"><%= totalcount(site) %> words altogether</span>
                 </p>
                 

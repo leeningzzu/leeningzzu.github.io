@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 李宁的学习笔记
+title: StatLee on the way 
 subtitle: Step by Step
 author: StatLee
 language:
@@ -15,6 +15,7 @@ url:  https://github.com/leeningzzu/leeningzzu.github.io       # Note: don't for
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
+
 
 #Custom Setting Start
 
@@ -28,15 +29,15 @@ header-img: img/header_img/home-bg-dark.jpg
 #signature-img: img/signature/BeanTechSign-white.png 
 
 
+
 # SNS settings
-# RSS: false
+RSS: false
 # weibo_username:     Demonbaneen
 # zhihu_username:     Demonbane
 github_username:    leeningzzu
 csdn_username:      leeningzzu  
-# twitter_username:   Demonbane_x
-#facebook_username:  YenYuHsuan
-#linkedin_username:  yu-hsuan-yen
+email_username:    leeningzzu@gmail.com
+tele_username:  statlee
 
 # Build settings
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
@@ -61,8 +62,7 @@ ga_domain: yoursite
 
 # Sidebar settings
 sidebar: true                       # whether or not using Sidebar.
-sidebar-about-description-line1: "Quiet people the loudest mind"
-sidebar-about-description-line2: "E-mail: leeningzzu@163.com"
+sidebar-about-description: "Quiet people the loudest mind"
 sidebar-avatar: img/ironman-draw-1.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 widgets:
 - featured-tags
@@ -86,9 +86,24 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 ## Friends
 friends: [
    {
-        title: "leeningzzu",
-        href: "https://blog.csdn.net/leeningzzu"
-   }
+        title: "白马负金羁",
+        href: "https://blog.csdn.net/baimafujinji"
+   },{ 
+        title: "computer science, math, and statistics",
+        href: "https://medium.com/cs-math"
+   },{
+        title: "Machine Learnings",
+        href: "https://machinelearnings.co"
+   },{
+        title: "深度碎片",
+        href: "https://github.com/EmbraceLife"
+   },{
+        title: "mit-deep-learning",
+        href: "https://github.com/lexfridman/mit-deep-learning"
+   },{
+        title: "Algorithm_Interview_Notes-Chinese",
+        href: "https://github.com/imhuay/Algorithm_Interview_Notes-Chinese"     
+   }           
  ]
 
 
@@ -159,7 +174,7 @@ markdown:
   
 # Extensions
 ## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
+
 theme: beantech
 
 #sitemap
@@ -180,7 +195,7 @@ valineAppId: vP8YXQlrRR3AJHABL6OpYXjI-gzGzoHsz # your leancloud application appi
 valineAppKey: cxMGorRRMXyk1vHXcnjAns8f # your leancloud application appkey
 valineNotify: false # mail notifier , https://github.com/xCss/Valine/wiki
 valineVerify: false # Verification code
-valinePlaceHolder: Let us talk more!! # comment box placeholder
+valinePlaceHolder: A disagreement may be the shortest cut between two minds. # comment box placeholder
 valineAvatar: hide # gravatar style
 valineGuestInfo: nick,mail,link # custom comment header
 valinePageSize: 10 # pagination size
