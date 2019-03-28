@@ -2,7 +2,7 @@ language: node_js
 
 node_js:  stable
 
-ache:
+cache:
     apt: true
     directories:
         - node_modules # 缓存不经常更改的内容
@@ -13,10 +13,7 @@ before_install:
     - chmod +x ./publish-to-gh-pages.sh  # 为shell文件添加可执行权限
 
 install: npm install
-
-before_script:
-  - git submodule update --remote --merge
-  
+ 
 script:
     - hexo clean # 清除
     - hexo g # 生成

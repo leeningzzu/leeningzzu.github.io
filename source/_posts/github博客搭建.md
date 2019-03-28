@@ -13,7 +13,9 @@ categories: github
   主要参考[Travis CI自动部署Hexo博客到GitHub](https://blog.qizhenjun.com/75a7da42/)及[使用Travis CI自动部署Hexo博客](使用Travis CI自动部署Hexo博客)
 #### 3. 推送新建博客
 ``` 
-git push origin hexo:hexo
+git add .
+git commit -m "new blog"
+git push 
 ```
 #### 4. Travis CI自动部署
   [Travis CI](https://travis-ci.org/)可见更新日志
