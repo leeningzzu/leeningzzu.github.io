@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>李宁的学习笔记</title>
+  <icon>https://www.gravatar.com/avatar/e7a7b93fe2dd11e7e273e2c659673b5f</icon>
+  <subtitle>Step by Step</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://github.com/leeningzzu/leeningzzu.github.io/"/>
+  <updated>2019-03-28T08:12:18.591Z</updated>
+  <id>https://github.com/leeningzzu/leeningzzu.github.io/</id>
+  
+  <author>
+    <name>StatLee</name>
+    <email>leeningzzu@gmail.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo + github 博客搭建</title>
+    <link href="https://github.com/leeningzzu/leeningzzu.github.io/2019/03/28/github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <id>https://github.com/leeningzzu/leeningzzu.github.io/2019/03/28/github博客搭建/</id>
+    <published>2019-03-28T02:27:11.000Z</published>
+    <updated>2019-03-28T08:12:18.591Z</updated>
+    
+    <content type="html"><![CDATA[<h2><span id="1-博客搭建">1 博客搭建</span></h2><p>主要参考<a href="https://zhuanlan.zhihu.com/p/35668237" target="_blank" rel="noopener">韦阳的博客</a></p><h2><span id="2-插件及优化">2 插件及优化</span></h2><p>主要参考<a href="https://blog.qizhenjun.com/75a7da42/" target="_blank" rel="noopener">Travis CI自动部署Hexo博客到GitHub</a>及<a href="https://www.itfanr.cc/2017/08/09/using-travis-ci-automatic-deploy-hexo-blogs/" target="_blank" rel="noopener">使用Travis CI自动部署Hexo博客</a></p><h2><span id="3-推送新建博客">3 推送新建博客</span></h2><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">add</span> .</span><br><span class="line">git commit -m <span class="string">"new blog"</span></span><br><span class="line">git <span class="keyword">push</span></span><br></pre></td></tr></table></figure><h2><span id="4-travis-ci自动部署">4 Travis CI自动部署</span></h2><p><a href="https://travis-ci.org/" target="_blank" rel="noopener">Travis CI</a>可见更新日志</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2&gt;&lt;span id=&quot;1-博客搭建&quot;&gt;1 博客搭建&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;主要参考&lt;a href=&quot;https://zhuanlan.zhihu.com/p/35668237&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;韦阳的博客&lt;/a&gt;&lt;/p&gt;
+      
+    
+    </summary>
+    
+      <category term="Software Skills" scheme="https://github.com/leeningzzu/leeningzzu.github.io/categories/Software-Skills/"/>
+    
+    
+      <category term="github 使用技巧" scheme="https://github.com/leeningzzu/leeningzzu.github.io/tags/github-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
+  
+</feed>
