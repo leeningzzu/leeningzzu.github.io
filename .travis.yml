@@ -26,5 +26,5 @@ branches:
         - hexo #只监测hexo分支，hexo是我的分支的名称，可根据自己情况设置
 env:
     global:
-        - GH_REF: github.com:leeningzzu/leeningzzu.github.io.git #设置GH_REF，注意更改yourname
+        - GH_REF: github.com/leeningzzu/leeningzzu.github.io.git #设置GH_REF，注意更改yourname
 
