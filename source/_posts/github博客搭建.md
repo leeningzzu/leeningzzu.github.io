@@ -5,7 +5,7 @@ date: 2019-03-28  10:27:11
 subtitle: github博客搭建
 header-img: 
 tags: github 使用技巧
-categories: github
+categories: 软件使用技巧
 ---
 #### 1. 博客搭建
   主要参考[韦阳的博客](https://zhuanlan.zhihu.com/p/35668237)
