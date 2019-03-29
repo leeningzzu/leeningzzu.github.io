@@ -47,11 +47,9 @@
   padding: 0;
   margin: 1em;
   line-height: 1.8em;
-}
-.toc-nav li {
   list-style-type: none;
 }
-.toc-nav li a:hover {
+.toc-nav a:hover {
   background-color: transparent !important;
 }
 .toc-nav .active > a {
