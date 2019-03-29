@@ -49,7 +49,7 @@
   line-height: 1.8em;
   list-style-type: none;
 }
-.toc-nav a:hover {
+.toc-nav li a:hover {
   background-color: transparent !important;
 }
 .toc-nav .active > a {
