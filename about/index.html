@@ -84,7 +84,13 @@
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 
                     <div class="site-heading">
-                        <h1>About</h1>
+                        <h1>
+                            {% if page.title %}{{ config.title }}
+                            {% elsif page.headerTitle %}{{ config.headerTitle}}
+                            {% else %}{{ site.title }}
+                            {% endif %}
+                        <!--About-->
+                        </h1>
                         <!--<hr class="small">-->
                         <span class="subheading">Wish for the Best, Prepare for the Worst</span>
                     </div>
@@ -109,7 +115,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">StatLee on the way</a>
+            <a class="navbar-brand" href="/">李宁的学习笔记</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -289,12 +295,14 @@
         
 
         
-            <p>Quiet people the loudest mind</p>
+            <p>Show Me the Code !</p>
+        
+        
+            <p>Email: leeningzzu@163.com</p>
         
 
         <!-- SNS Link -->
         <ul class="list-inline">
-            
             
             
             
@@ -329,6 +337,8 @@
                             </span>
                         </a>
                     </li>
+                
+                
                 
 
             
@@ -438,6 +448,8 @@
                         </a>
                     </li>
                 
+                
+                
                              
                 
                     <li>
@@ -468,7 +480,7 @@
                 <p class="copyright text-muted">
                     <a><img alt="web trackers" src="http://monster.gostats.com/bin/count/a_507303/t_6/i_1/counter.png" style="border-width:0"></a>
                     Since 2019/01/01,
-                    <span class="post-count">74 words altogether</span>
+                    <span class="post-count">70 words altogether</span>
                 </p>
                 
             </div>
