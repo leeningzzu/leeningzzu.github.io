@@ -72,4 +72,8 @@
   display: inline;
   float: left;
   padding-left: 12px;
+/*page contents indentation*/
+}
+#sidebar ol.toc-nav-child {
+  padding-left: 10px;
 }

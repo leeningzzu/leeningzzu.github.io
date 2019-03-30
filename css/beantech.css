@@ -50,6 +50,11 @@
 .sidebar-container .short-about .list-inline > li {
   padding-left: 0px;
 }
+.sidebar-container .wechat .wechatQR {
+  text-align: center;
+  width: 200px;
+  height: 200px;
+} 
 
 body {
   /* Hux learn from
@@ -234,7 +239,20 @@ pre code {
   color: #0085a1;
   border-color: #0085a1;
 }
-
+/* added by Yuankun Li */
+.post-container .post-category {
+  display: inline-block;
+  font-size: 12px;
+  margin-left: -5px;
+}
+.post-container .post-category a {
+  color: gray;
+  margin: 0 5px;
+}
+.post-container .post-category a:hover,
+.post-container .post-category a:active {
+  color: #0085a1;
+}
 @media only screen and (max-width: 767px) {
   .navbar-default .navbar-collapse {
     border: none;
@@ -494,6 +512,24 @@ pre code {
 .intro-header .post-heading .meta a {
   color: white;
 }
+
+/* added by CatherineLiyuankun */
+.intro-header .post-heading .tags{
+  display: inline-block;
+}
+.intro-header .post-heading .page-header-category {
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 5px;
+}
+.intro-header .post-heading .page-header-category a {
+  color: white;
+  margin: 0 5px;
+}
+.intro-header .post-heading .page-header-category a:hover,
+.intro-header .post-heading .page-header-category a:active {
+  color: #0a9caf;
+}
 @media only screen and (min-width: 768px) {
   .intro-header .post-heading h1 {
     font-size: 55px;
@@ -678,7 +714,7 @@ form .row:first-child .floating-label-form-group {
   color: white;
 }
 .pager {
-  margin: 20px 0 0 !important;
+  margin: 20px 0 60px !important;
   padding: 0px !important;
 }
 .pager li > a,
