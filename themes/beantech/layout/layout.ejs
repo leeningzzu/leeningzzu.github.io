@@ -15,14 +15,30 @@
 
     <!-- Footer -->
     <%- partial('_partial/footer') %>
+    
+    <!-- Share -->
+    <% include ./_third-party/needsharebutton.ejs %>
 
+    <!-- Share float -->
+    <% if (theme.needmoreshare2.enable && theme.needmoreshare2.float.enable) {%>
+    <div id="needsharebutton-float">
+      <span class="btn">
+        <i class="fa fa-share-alt fa-inverse" aria-hidden="true"></i>
+      </span>
+    </div>
+    <%}%>
 
 	<a id="rocket" href="#top" class=""></a>
 	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
     <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
-<!-- Image to hack wechat -->
-<img src="<%= config['url'] %><%= config['root'] %>img/icon_wechat.png" width="0" height="0" />
-<!-- Migrate from head to bottom, no longer block render and still work -->
+
+    <!-- Fancybox -->
+    <% if (theme.fancybox){ %>
+        <%- css('/lib/fancybox/jquery.fancybox') %>
+        <%- js('/lib/fancybox/jquery.fancybox.pack') %>
+        <%- js('/js/wrapImage.js') %>
+    <% } %>
+    <!-- Migrate from head to bottom, no longer block render and still work -->
 
 </body>
 

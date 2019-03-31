@@ -1,5 +1,6 @@
 ---
 layout: page
+
 ---
 <!-- Main Content -->
 
@@ -23,7 +24,7 @@ layout: page
         </div>
     </a>
     <% if (config.home_posts_tag){%>
-        <p class="post-meta" style="margin: 10px 0;">
+	<% if (config.home_posts_tag || config.home_posts_category && post.categories && post.categories.length){%>									    	<p class="post-meta" style="margin: 10px 0;">
             Posted by <%- post.author || config.author %> on
             <%= post.date.format(config.date_format) %>
         </p>
@@ -39,6 +40,29 @@ layout: page
         </p>
     <%}%>
 
+	<%}%>
+
+    <!-- added by Yuankun Li -->
+    <% if (config.home_posts_category && post.categories && post.categories.length){%>
+        <div class="post-category">
+            <%- list_categories(post.categories, {
+            show_count: false,
+            class: 'category-list',
+            style: 'none',
+            separator: '►',
+            depth: 2
+            }) %>
+        </div>
+    <%}%>
+
+    <!-- Share -->
+    <% if (config.needmoreshare2.enable && config.needmoreshare2.postbottom.postEnable) {%>
+        <span id="needsharebutton-postbottom" class="post-share">
+            <span class="btn">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+        </span>
+    <%}%>
 </div>
 <hr>
 <% }); %>

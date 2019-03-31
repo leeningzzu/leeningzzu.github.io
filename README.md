@@ -1,9 +1,9 @@
 > Ported Theme of [Hux Blog](https://github.com/Huxpro/huxpro.github.io), Thank [Huxpro](https://github.com/Huxpro) for designing such a flawless theme.
 > 
-> This BeanTech theme created by [YuHsuan](http://beantech.org) modified from the original Porter [Kaijun](http://kaijun.rocks/hexo-theme-huxblog/)
+> This Zilan theme created by [YuankunLi](https://catherineliyuankun.github.io/) modified from the original Porter [Kaijun](http://kaijun.rocks/hexo-theme-huxblog/) and [YuHsuan](http://beantech.org/)
 
-# [Live Demo](http://beantech.org)
-![BeanTech Desktop](http://beantech.org/img/beantech-desktop.png)
+# Demo [Live Demo](https://catherineliyuankun.github.io/)
+[Zilan Blog](https://catherineliyuankun.github.io/)
 
 # Usage
 I publish the whole project for your convenience, so you can just follow the instruction down below, then you can easily customiz your own blog!
@@ -12,8 +12,8 @@ Let's begin!!!
 
 ## Init
 ```bash
-git clone https://github.com/YenYuHsuan/hexo-theme-beantech.git ./hexo-beantech
-cd hexo-beantech
+git clone https://github.com/CatherineLiyuankun/Hexo-theme-zilan.git ./hexo-zilan
+cd hexo-zilan
 npm install
 ```
 
@@ -56,16 +56,29 @@ signature-img: img/signature/<your-signature-ID>
 ### Go to top icon Setup
 My icon is using iron man, you can change to your own icon at `css/image`.
 
-### Post tag
-You can decide to show post tags or not.
+### Post tag and category
+You can decide to show post tags and categories or not.
 ```yml
 home_posts_tag: true
+home_posts_category: true
 ```
-![home_posts_tag-true](./source/_posts/hexo-theme-beantech/home_posts_tag-true.png)
+![home_posts_tag-true](https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/hexotheme/home_posts_tag-true.png)
 ```yml
 home_posts_tag: false
+home_posts_category: false
 ```
-![home_posts_tag-false](./source/_posts/hexo-theme-beantech/home_posts_tag-false.png)
+![home_posts_tag-false](https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/hexotheme/home_posts_tag-false.png)
+
+### Page Header category
+You can decide to show page_header categories or not.
+```yml
+page_header_category: true
+```
+![page_header_category-true](https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/hexotheme/page_header_category-true.png)
+```yml
+page_header_category: false
+```
+![page_header_category-false](https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/hexotheme/page_header_category-false.png)
 
 ### Markdown render
 My markdown render engine plugin is [hexo-renderer-markdown-it](https://github.com/celsomiranda/hexo-renderer-markdown-it).
@@ -81,13 +94,13 @@ markdown:
     typographer: true
     quotes: '“”‘’'
 ```
-and if you want to change the header anchor 'ℬ', you can go to `layout/post.ejs` to change it.
+and if you want to change the header anchor 'ℒ', you can go to `layout/post.ejs` to change it.
 ```javascript
 async("//cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
         anchors.options = {
           visible: 'hover',
           placement: 'left',
-          icon: 'ℬ'
+          icon: 'ℒ'
         };
         anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
     })
@@ -102,7 +115,6 @@ hexo server # run hexo in local environment
 hexo deploy # hexo will push the static files automatically into the specific branch(gh-pages) of your repo!
 ```
 
-# Have fun ^_^ 
 
-Please [Star](https://github.com/YenYuHsuan/hexo-theme-beantech) this Project if you like it! [Follow](https://github.com/YenYuHsuan) would also be appreciated!
+Please [Star](https://github.com/catherineliyuankun/hexo-theme-zilan) this Project if you like it! [Follow](https://github.com/catherineliyuankun) would also be appreciated!
 Peace!

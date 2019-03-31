@@ -6,7 +6,7 @@
                 <ul class="list-inline text-center">
                 <% if (config.RSS) { %>
                     <li>
-                        <a href="<%= config.root + 'feed.xml' %>">
+                        <a href="<%= config.root + 'atom.xml' %>">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
@@ -14,16 +14,7 @@
                         </a>
                     </li>
                 <% } %>
-                <% if (config.twitter_username) { %>
-                    <li>
-                        <a target="_blank" href="https://twitter.com/<%= config.twitter_username %>">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                <% } %>
+                
                 <% if (config.zhihu_username) { %>
                     <li>
                         <a target="_blank" href="https://www.zhihu.com/people/<%= config.zhihu_username %>">
@@ -56,8 +47,8 @@
                         </a>
                     </li>
                 <% } %>
-                             
-                <% if (config.email) { %>
+                                             
+                <% if (config.email_username) { %>
                     <li>
                         <a target="_blank" href="mailto:<%= config.email_username %>">
                             <span class="fa-stack fa-lg">
@@ -67,7 +58,7 @@
                         </a>
                     </li>
                 <% } %>
-
+                
                 <% if (config.tele_username) { %>
                     <li>
                         <a target="_blank"  href="https://t.me/<%= config.tele_username %>">

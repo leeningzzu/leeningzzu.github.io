@@ -1,7 +1,18 @@
 <!-- Categories -->
-<% if (site.categories.length){ %>
-    <h5><%= __('categories') %></h5>
-    <div class="widget">
-      <%- list_categories({show_count: theme.show_count}) %>
-    </div>
-<% } %>
+<% if(config['sidebar-category']) { %>
+    <section>
+        <!-- no hr -->
+        <h5><a href="<%= config.root %>categories/">CATEGORORY</a></h5>
+            <% if (site.categories && site.categories.length){ %>
+                <div class="article-category" id="categories">
+                    <%- list_categories(site.categories, {
+                        orderby: 'name',
+                        show_count: true,
+                        class: 'category',
+                        style: 'list',
+                        depth: 3
+                    }) %>
+                </div>
+            <% } %>
+    </section>
+<% }%>

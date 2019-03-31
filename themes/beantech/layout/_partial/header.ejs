@@ -1,15 +1,17 @@
-<!-- Modified by Yu-Hsuan Yen -->
 <!-- Post Header -->
 <style type="text/css">
     header.intro-header{
         <% if (is_home()) { %>
-            background-image: url('<%= config.root + config["header-img"] %>') 
+            background-image: url('<%= config.root + config["header-img"] %>'); 
             /*config*/
         <%} else if (is_post()){%>
-            background-image: url('<%= page["header-img"] %>')
+            background-image: url('<%= page["header-img"] %>');
             /*post*/
+        <%} else if (is_category()){%>
+            background-image: url('<%= config.root + "img/header_img/category-bg.jpg" %>');
+            /*category*/
         <%} else {%>
-            background-image: url('<%= config.root + page["header-img"] %>')
+            background-image: url('<%= config.root + page["header-img"] %>');
             /*page*/
         <%} %>
     }
@@ -18,37 +20,66 @@
         background-image: url('<%= config.root + config["signature-img"] %>');
     }
     <%}%>
+
+    <% if (config["header-cover-color"]) {%>
+    #header-cover{
+        background-color: <%= config["header-cover-color"] %>;
+    }
+    <%}%>
 </style>
 
 <header class="intro-header" >
-    <!-- Signature -->
-    <div id="signature">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <% if (is_post()) { %>
-                    <div class="post-heading">
-                        <div class="tags">
-                            <% page.tags.forEach(function(tag){ %>
-                              <a class="tag" href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>
-                            <% }) %>
+    <div id="header-cover">
+        <!-- Signature -->
+        <div id="signature">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <% if (is_post()) { %>
+                        <div class="post-heading">
+                            <div class="tags">
+                                <% page.tags.forEach(function(tag){ %>
+                                <a class="tag" href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>
+                                <% }) %>
+                            </div>
+                            <!-- category post header -->
+                            <% if (config.page_header_category && page.categories && page.categories.length){%>
+                                <div class="page-header-category">
+                                    <%- list_categories(page.categories, {
+                                    show_count: false,
+                                    class: 'category-list',
+                                    style: 'none',
+                                    separator: '►',
+                                    depth: 2
+                                    }) %>
+                                </div>
+                            <%}%>
+                        
+                            <h1>
+                                <%= page.title %>
+                                <!-- Share -->
+                                <% if (config.needmoreshare2.enable && theme.needmoreshare2.postbottom.headerEnable) {%>
+                                    <span id="needsharebutton-postbottom" class="header-share">
+                                        <span class="btn">
+                                            <i class="fa fa-share-alt" aria-hidden="true"></i>
+                                        </span>
+                                    </span>
+                                <%}%>
+                            </h1>
+                            <h2 class="subheading"><%= page.subtitle || "" %></h2>
+                            <span class="meta">
+                                Posted by <%- page.author || config.author %> on
+                                <%= page.date.format(config.date_format) %>
+                            </span>
                         </div>
-                        <h1><%= page.title %></h1>
-                        <h2 class="subheading"><%= page.subtitle || "" %></h2>
-                        <span class="meta">
-                            Posted by <%- page.author || config.author %> on
-                            <%= page.date.format(config.date_format) %>
-                        </span>
+                    <% } else { %>
+                        <div class="site-heading">
+                            <h1><%= page.title || config.headTitle %></h1>
+                            <!--<hr class="small">-->
+                            <span class="subheading"><%= page.description || config.subtitle || "" %></span>
+                        </div>
+                    <% } %>
                     </div>
-                <% } else { %>
-                    <div class="site-heading">
-                        <h1><%= page.title || config.title %></h1>
-                        <!--<hr class="small">-->
-                        <span class="subheading"><%= page.description || config.subtitle || "" %></span>
-                    </div>
-                <% } %>
-
-
                 </div>
             </div>
         </div>

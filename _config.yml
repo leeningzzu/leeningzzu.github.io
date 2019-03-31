@@ -3,7 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: StatLee on the way 
+title: 李宁的学习笔记
+headerTitle: "StatLee on the way"
 subtitle: Step by Step
 author: StatLee
 language:
@@ -15,8 +16,16 @@ url:  https://github.com/leeningzzu/leeningzzu.github.io       # Note: don't for
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
+rss:  /atom.xml
 
-
+# Header
+menu:
+  Home: /
+  Archives: /archive
+  Categories: /categories
+  Tags: /tags
+  About: /about
+  
 #Custom Setting Start
 
 # Site settings
@@ -25,32 +34,38 @@ email: leeningzzu@gmail.com
 description: ""
 keyword: ""
 header-img: img/header_img/home-bg-dark.jpg
-#signature: true #show signature
-#signature-img: img/signature/BeanTechSign-white.png 
-
+signature: true #show signature
+signature-img: img/signature/signature-white.png
+header-cover: true # make cover the header img
+header-cover-color: rgba(0,0,0,.2) # the color cover the header img
+img-watermark: 	imageView2/0/q/75|watermark/1/image/aHR0cDovL3BlM29sN3Rqay5ia3QuY2xvdWRkbi5jb20vc2lnbmF0dXJlLXdoaXRlLnBuZw==/dissolve/50/gravity/SouthEast/dx/10/dy/5
 
 
 # SNS settings
-RSS: false
+RSS: true
 # weibo_username:     Demonbaneen
 # zhihu_username:     Demonbane
 github_username:    leeningzzu
 csdn_username:      leeningzzu  
-email_username:    leeningzzu@gmail.com
+youtube_channel:   channel/UCT6l6ATYtwasn1AyFzD2bSg
+email_username:  leeningzzu@163.com
 tele_username:  statlee
 
 # Build settings
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
 
-# Disqus settings
-# disqus_username: your-disqus-ID
-
-# Duoshuo settings
-# duoshuo_username: kaijun
-# Share component is depend on Comment so we can NOT use share only.
-# duoshuo_share: true                     # set to false if you want to use Comment without Sharing
-
+# valine
+valine: true
+valineAppId: vP8YXQlrRR3AJHABL6OpYXjI-gzGzoHsz # your leancloud application appid
+valineAppKey: cxMGorRRMXyk1vHXcnjAns8f # your leancloud application appkey
+valineNotify: false # mail notifier , https://github.com/xCss/Valine/wiki
+valineVerify: false # Verification code
+valinePlaceHolder: A disagreement may be the shortest cut between two minds. # comment box placeholder
+valineAvatar: hide # gravatar style
+valineGuestInfo: nick,mail,link # custom comment header
+valinePageSize: 10 # pagination size
+visitor: true
 
 # Analytics settings
 # Baidu Analytics
@@ -59,10 +74,42 @@ anchorjs: true                          # if you want to customize anchor. check
 ga_track_id: 'UA-XXXXXXXX-X'          # Format: UA-xxxxxx-xx
 ga_domain: yoursite
 
+# NeedMoreShare2
+# This plugin is a pure javascript sharing lib which is useful in China.
+# See: https://github.com/revir/need-more-share2
+# Also see: https://github.com/DzmVasileusky/needShareButton
+# iconStyle: default | box | light
+# boxForm: horizontal | vertical
+# position: top / middle / bottom + Left / Center / Right
+# networks: Weibo,Wechat,Douban,QQZone,Twitter,Linkedin,Mailto,Reddit,
+#           Delicious,StumbleUpon,Pinterest,Facebook,GooglePlus,Slashdot,
+#           Technorati,Posterous,Tumblr,GoogleBookmarks,Newsvine,
+#           Evernote,Friendfeed,Vkontakte,Odnoklassniki,Mailru
+needmoreshare2:
+  enable: true
+  postbottom: 
+    headerEnable: true
+    postEnable: true
+    enable: true
+    options:
+      postIconStyle: light
+      headerIconStyle: light
+      boxForm: horizontal
+      postPosition: middleRight
+      headerPosition: bottom
+      networks: Wechat,Weibo,Douban,Twitter,Facebook,Reddit,Linkedin,Evernote
+  float: 
+    enable: true
+    options:
+      iconStyle: box
+      boxForm: horizontal
+      position: middleRight
+      networks: Wechat,Weibo,Douban,Twitter,Facebook,Reddit,Linkedin,Evernote
+
 
 # Sidebar settings
 sidebar: true                       # whether or not using Sidebar.
-sidebar-about-description: "Quiet people the loudest mind"
+sidebar-about-description: "Just Show Me the Code 👉📜"
 sidebar-avatar: img/ironman-draw-1.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 widgets:
 - featured-tags
@@ -77,13 +124,19 @@ widgets:
 archive_type: 'monthly'
 show_count: true
 
-
 ## Featured Tags
 featured-tags: true                     # whether or not using Feature-Tags
 featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
 
+## Category
+page_header_category: true # show page_header categories
+home_posts_category: true # show posts categories
+post-category: false # show page categories at the end
+sidebar-category: true # show sidebar categories
 
 ## Friends
+post-friends: false
+
 friends: [
    {
         title: "白马负金羁",
@@ -140,8 +193,13 @@ highlight:
 # Category & Tag
 default_category: uncategorized
 category_map:
+  Software: Software and skills
+  Programming: Programming
+  Theory: Theory
+  Algorithm: Algorithm
 tag_map:
 home_posts_tag: true # show posts tags
+
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
@@ -171,11 +229,22 @@ markdown:
     linkify: true
     typographer: true
     quotes: '“”‘’'
-  
+    anchors:
+      level: 1
+      permalinkSymbol: ''  
+
 # Extensions
 ## Plugins: https://hexo.io/plugins/
-
+## Themes: https://hexo.io/themes/
 theme: beantech
+plugins:
+    hexo-generator-feed
+
+#Feed Atom
+feed:
+    type: atom
+    path: atom.xml
+    limit: 20
 
 #sitemap
 sitemap:
@@ -190,13 +259,3 @@ deploy:
   branch: master
   
 
-valine: true
-valineAppId: vP8YXQlrRR3AJHABL6OpYXjI-gzGzoHsz # your leancloud application appid
-valineAppKey: cxMGorRRMXyk1vHXcnjAns8f # your leancloud application appkey
-valineNotify: false # mail notifier , https://github.com/xCss/Valine/wiki
-valineVerify: false # Verification code
-valinePlaceHolder: A disagreement may be the shortest cut between two minds. # comment box placeholder
-valineAvatar: hide # gravatar style
-valineGuestInfo: nick,mail,link # custom comment header
-valinePageSize: 10 # pagination size
-visitor: true

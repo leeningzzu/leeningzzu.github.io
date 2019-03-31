@@ -1,0 +1,75 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <%
+            var title = '';
+            if (page.category) title = page.category;
+            if (page.tag) title = page.tag;
+            if (page.archive) {
+                if (page.year) title = page.year + (page.month ? '/' + page.month : '');
+                else title = __('archive_a');
+            }
+            %>
+            <h2 class="archive-title<% if (page.tag){ %> tag<% } else if (page.category){ %> category<% } %>">
+                <%= title %>
+            </h2>
+            <% if (type == 'tag'){ %>
+                <%- partial('tags') %>
+            <% } else if (type == 'archive'){ %>
+                <% 	
+                    var years = {};	
+                    site.posts.sort('date').reverse().forEach(function(post){	
+                        var year = post.date.year()	
+                        if(years[year]===undefined){	
+                            years[year] = [];	
+                        }	
+                        years[year].push(post);	
+                    });	
+                %>	
+
+                <% Object.keys(years).reverse().forEach(function(year){  %>	
+                    <div class="archive-archive one-tag-list">	
+                        <span class="fa fa-calendar-times-o listing-seperator" id="<%= year %>">	
+                            <span class="tag-text"><%= year %></span>	
+                        </span>
+                        <ul>	
+                        <% years[year].map(function(post){  %>	
+                            <!-- <li class="listing-item">	
+                            <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>	
+                            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>	
+                            </li> -->	
+                            <li >	
+                                <%= post.date.format('MM-DD') %>	
+                                <i class="fa fa-angle-double-right" aria-hidden="true"></i>	
+                                <a href="<%- config.root %><%- post.path %>" style="color: #0085a1">	
+                                    <span>	
+                                        <%- post.title || "Untitled" %>	
+                                    </span>	
+                                </a>	
+                                <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->	
+                            </li>
+                        <% }) %>
+                        </ul>
+                    </div>
+                <% }) %>
+            <% } else if (type == 'category'){ %>
+                <div class="archive-category">
+                    <ul>
+                    <!-- 这里使用 page.posts，因为应该是按照某一分类来获取文章，并不是获取所有分类 -->
+                    <% page.posts.sort('date', 'desc').each(function (item) { %>
+                        <li>
+                            <a href="<%= config.root %><%- item.path %>"><%= item.title %></a>
+                        </li>
+                    <% }) %>
+                    </ul>
+                </div>
+                <!-- 分页 -->
+                <% if (page.total > 1) { %>
+                    <div class="archive-page">
+                        <%- paginator({prev_text: __('prev'), next_text: __('next')}) %>
+                    </div>
+                <% } %>
+            <% } %>
+        </div>
+    </div>
+</div>
