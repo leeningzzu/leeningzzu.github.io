@@ -236,7 +236,7 @@ markdown:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: beantech
+theme: huweihuang
 plugins:
     hexo-generator-feed
 
@@ -257,5 +257,6 @@ deploy:
   repository: git@github.com:leeningzzu/leeningzzu.github.io.git
   #repository: https://github.com/leeningzzu/leeningzzu.github.io
   branch: master
+  message: Update CNAME                     
   
 
