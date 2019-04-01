@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/leeningzzu/leeningzzu.github.io/"/>
-  <updated>2019-03-30T17:27:19.730Z</updated>
+  <updated>2019-04-01T02:50:30.813Z</updated>
   <id>https://github.com/leeningzzu/leeningzzu.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://github.com/leeningzzu/leeningzzu.github.io/2018/11/01/github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     <id>https://github.com/leeningzzu/leeningzzu.github.io/2018/11/01/github博客搭建/</id>
     <published>2018-10-31T19:09:06.000Z</published>
-    <updated>2019-03-30T17:27:19.730Z</updated>
+    <updated>2019-04-01T02:50:30.813Z</updated>
     
     <content type="html"><![CDATA[<h2 id="博客搭建">博客搭建</h2><p>主要参考<a href="https://zhuanlan.zhihu.com/p/35668237" target="_blank" rel="noopener">韦阳的博客</a></p><h3 id="采用hexo-或者其他方式">采用HEXO 或者其他方式</h3><h3 id="挑选主题">挑选主题</h3><h3 id="进行修改">进行修改</h3><h3 id="插件及优化">插件及优化</h3><p>主要参考<a href="https://blog.qizhenjun.com/75a7da42/" target="_blank" rel="noopener">Travis CI自动部署Hexo博客到GitHub</a>及<a href="https://www.itfanr.cc/2017/08/09/using-travis-ci-automatic-deploy-hexo-blogs/" target="_blank" rel="noopener">使用Travis CI自动部署Hexo博客</a></p><h2 id="推送新建博客">推送新建博客</h2><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">add</span> .</span><br><span class="line">git commit -m <span class="string">"new blog"</span></span><br><span class="line">git <span class="keyword">push</span></span><br></pre></td></tr></table></figure><h2 id="travis-ci自动部署">Travis CI自动部署</h2><p><a href="https://travis-ci.org/" target="_blank" rel="noopener">Travis CI</a>可见更新日志</p>]]></content>
     
@@ -36,9 +36,9 @@
     
     </summary>
     
-      <category term="Software" scheme="https://github.com/leeningzzu/leeningzzu.github.io/categories/Software-and-skills/"/>
+      <category term="Porgramming" scheme="https://github.com/leeningzzu/leeningzzu.github.io/categories/Porgramming/"/>
     
-      <category term="Software Skills" scheme="https://github.com/leeningzzu/leeningzzu.github.io/categories/Software-and-skills/Software-Skills/"/>
+      <category term="test blog" scheme="https://github.com/leeningzzu/leeningzzu.github.io/categories/Porgramming/test-blog/"/>
     
     
       <category term="github 使用技巧" scheme="https://github.com/leeningzzu/leeningzzu.github.io/tags/github-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
@@ -50,7 +50,7 @@
     <link href="https://github.com/leeningzzu/leeningzzu.github.io/2018/11/01/hexo-toc%20test/"/>
     <id>https://github.com/leeningzzu/leeningzzu.github.io/2018/11/01/hexo-toc test/</id>
     <published>2018-10-31T19:09:06.000Z</published>
-    <updated>2019-04-01T00:55:34.447Z</updated>
+    <updated>2019-04-01T02:49:41.346Z</updated>
     
     <content type="html"><![CDATA[<h2 id="building">building</h2><p>主要参考<a href="https://zhuanlan.zhihu.com/p/35668237" target="_blank" rel="noopener">韦阳的博客</a></p><h3 id="the-first">the first</h3><h3 id="the-second">the second</h3><h3 id="the-plugin">the plugin</h3><p>主要参考<a href="https://blog.qizhenjun.com/75a7da42/" target="_blank" rel="noopener">Travis CI自动部署Hexo博客到GitHub</a>及<a href="https://www.itfanr.cc/2017/08/09/using-travis-ci-automatic-deploy-hexo-blogs/" target="_blank" rel="noopener">使用Travis CI自动部署Hexo博客</a></p><h2 id="push-the-blog">push the blog</h2><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">add</span> .</span><br><span class="line">git commit -m <span class="string">"new blog"</span></span><br><span class="line">git <span class="keyword">push</span></span><br></pre></td></tr></table></figure><h3 id="the-first">the first</h3><h3 id="the-second">the second</h3><h3 id="the-plugin">the plugin</h3><h2 id="travis-ci-building">Travis CI building</h2><p><a href="https://travis-ci.org/" target="_blank" rel="noopener">Travis CI</a>可见更新日志</p><h3 id="the-first">the first</h3><h3 id="the-second">the second</h3><h3 id="the-plugin">the plugin</h3><h2 id="train">train</h2><h3 id="the-first">the first</h3><h3 id="the-second">the second</h3><h3 id="the-plugin">the plugin</h3><h2 id="deep-learning">deep learning</h2><h3 id="the-first">the first</h3><h3 id="the-second">the second</h3><h3 id="the-plugin">the plugin</h3><h2 id="machine-learning">machine learning</h2><h3 id="the-first">the first</h3><h3 id="the-second">the second</h3><h3 id="the-plugin">the plugin</h3><h2 id="jave-learning">jave learning</h2><h3 id="the-first">the first</h3><h3 id="the-second">the second</h3><h3 id="the-plugin">the plugin</h3><h2 id="r">R</h2><h3 id="the-first">the first</h3><h3 id="the-second">the second</h3><h3 id="the-plugin">the plugin</h3><h2 id="python-learning">python learning</h2><h3 id="the-first">the first</h3><h3 id="the-second">the second</h3><h3 id="the-plugin">the plugin</h3><h2 id="statistic">statistic</h2><h3 id="the-first">the first</h3><h3 id="the-second">the second</h3><h3 id="the-plugin">the plugin</h3><h2 id="hoping">hoping</h2><h3 id="the-first">the first</h3><h3 id="the-second">the second</h3><h3 id="the-plugin">the plugin</h3>]]></content>
     
@@ -70,7 +70,7 @@
       <category term="Software and Skills" scheme="https://github.com/leeningzzu/leeningzzu.github.io/categories/Software-and-skills/Software-and-Skills/"/>
     
     
-      <category term="github 使用技巧" scheme="https://github.com/leeningzzu/leeningzzu.github.io/tags/github-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
+      <category term="test the contents" scheme="https://github.com/leeningzzu/leeningzzu.github.io/tags/test-the-contents/"/>
     
   </entry>
   
