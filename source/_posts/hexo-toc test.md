@@ -1,5 +1,5 @@
 ---
-title: hexo + github 博客搭建
+title: hexo-toc test
 catalog: true
 toc_nav_num: true
 date: 2018-11-01 03:09:06
@@ -8,7 +8,7 @@ header-img:
 tags: github 使用技巧
 categories:
 - Software
-- Software Skills
+- Software and Skills
 ---
 ##  building
   主要参考[韦阳的博客](https://zhuanlan.zhihu.com/p/35668237)
