@@ -1,7 +1,7 @@
 ---
 title: hexo + github 博客搭建
 catalog: true
-toc_nav_num: false
+toc_nav_num: true
 date: 2018-11-01 03:09:06
 subtitle: github博客搭建
 header-img: 
