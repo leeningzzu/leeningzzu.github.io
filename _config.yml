@@ -126,7 +126,8 @@ show_count: true
 
 ## Featured Tags
 featured-tags: true                     # whether or not using Feature-Tags
-featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+post-tags: false                # whether or not using Feature-Tags at bottom of blog page
+featured-condition-size: 0              # A tag will be featured if the size of it is more than this condition value
 
 ## Category
 page_header_category: true # show page_header categories
@@ -193,7 +194,7 @@ highlight:
 # Category & Tag
 default_category: uncategorized
 category_map:
-  Software: Software and skills
+  Software and Skills: Software and Skills
   Programming: Programming
   Theory: Theory
   Algorithm: Algorithm

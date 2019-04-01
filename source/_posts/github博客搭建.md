@@ -1,14 +1,14 @@
 ---
 title: hexo + github 博客搭建
 catalog: true
-toc_nav_num: true
+toc_nav_num: false
 date: 2018-11-01 03:09:06
 subtitle: github博客搭建
 header-img: 
 tags: github 使用技巧
 categories:
-- Software
-- Software Skills
+- Porgramming
+- test blog
 ---
 ##  博客搭建
   主要参考[韦阳的博客](https://zhuanlan.zhihu.com/p/35668237)

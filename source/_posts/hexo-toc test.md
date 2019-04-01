@@ -5,10 +5,10 @@ toc_nav_num: true
 date: 2018-11-01 03:09:06
 subtitle: github博客搭建
 header-img: 
-tags: 测试目录
+tags: test the contents
 categories:
-- Software
 - Software and Skills
+- github blog building
 ---
 ##  building
   主要参考[韦阳的博客](https://zhuanlan.zhihu.com/p/35668237)
