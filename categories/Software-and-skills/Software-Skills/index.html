@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          About - Knowledge is Power
+          Knowledge is Power
         
     </title>
 
-    <link rel="canonical" href="https://github.com/leeningzzu/leeningzzu.github.io/about/">
+    <link rel="canonical" href="https://github.com/leeningzzu/leeningzzu.github.io/categories/Software-and-skills/Software-Skills/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -71,8 +71,8 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('/img/header_img/Iron-Man-3.jpg');
-            /*page*/
+            background-image: url('/img/header_img/category-bg.jpg');
+            /*category*/
         
     }
     
@@ -97,9 +97,9 @@
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     
                         <div class="site-heading">
-                            <h1>About</h1>
+                            <h1>StatLee on the way</h1>
                             <!--<hr class="small">-->
-                            <span class="subheading">Wish for the Best, Prepare for the Worst</span>
+                            <span class="subheading">Step by Step</span>
                         </div>
                     
                     </div>
@@ -223,55 +223,57 @@
                 post-container
             ">
             
-                <blockquote>
-<p>光有好奇心而不去實踐，等於自願放棄成功機會<br>
-別為自己畫地自限，Just Do It！！</p>
-</blockquote>
+                <div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 archive">
+            
+            <h2 class="archive-title category">
+                Software Skills
+            </h2>
+            
+                <div class="archive-category">
+                    <ul>
+                    <!-- 这里使用 page.posts，因为应该是按照某一分类来获取文章，并不是获取所有分类 -->
+                    
+                        <li>
+                            <a href="/2018/11/01/github博客搭建/">hexo + github 博客搭建</a>
+                        </li>
+                    
+                    </ul>
+                </div>
+                <!-- 分页 -->
+                
+            
+        </div>
+    </div>
+</div>
+<style type="text/css">
+
+ 
+    @media (min-width: 992px) {
+    .archive {
+        margin-left: 8.33333333%;
+        padding-right: 26.333333%;
+    }
+}
+
+</style>
+
+<style type="text/css">
+
+    @media (min-width: 1200px){
+    .archive {
+    margin-left: 16.66666667%;
+    padding-right: 16.666667%;
+    }
+}
+
+</style>
+
+
 
 
                 <!-- 如果开启评论功能 -->
-                
-                    <hr>
-
-                    
-
-                    
-
-                     
-                    <div class="comments" id="comments">
-                    </div>
-                    
-                    
-                    
-                    
-
-                    
-                    
-                   
-                    <link rel="stylesheet" href="/css/toc.css">
-                    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-                    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-                    <script type="text/javascript">
-                        var GUEST = ['nick','mail','link'];
-                        var guest = "nick,mail,link";
-                        guest = guest.split(',').filter(item=>{
-                            return GUEST.indexOf(item)>-1;
-                    });
-                    new Valine({
-                        el: '#comments' ,
-                        verify: false,
-                        notify: false,
-                        appId: 'vP8YXQlrRR3AJHABL6OpYXjI-gzGzoHsz',
-                        appKey: 'cxMGorRRMXyk1vHXcnjAns8f',
-                        placeholder: 'A disagreement may be the shortest cut between two minds.',
-                        avatar: 'hide',
-                        guest_info: guest,
-                        pageSize: '10' || 10,
-                        lang: 'en'
-                    });
-                    </script> 
-                    
                 
             </div>
 
