@@ -5,7 +5,7 @@ toc_nav_num: true
 date: 2018-11-01 03:09:06
 subtitle: github博客搭建
 header-img: 
-tags: github 使用技巧
+tags: 测试目录
 categories:
 - Software
 - Software and Skills
