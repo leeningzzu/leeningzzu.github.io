@@ -24,5 +24,65 @@ git add .
 git commit -m "new blog"
 git push 
 ```
+### the first
+
+### the second
+
+### the plugin
 ##  Travis CI building
   [Travis CI](https://travis-ci.org/)可见更新日志
+### the first
+
+### the second
+
+### the plugin
+
+##  train
+### the first
+
+### the second
+
+### the plugin
+## deep learning
+### the first
+
+### the second
+
+### the plugin
+## machine learning
+### the first
+
+### the second
+
+### the plugin
+## jave learning
+### the first
+
+### the second
+
+### the plugin
+## R
+### the first
+
+### the second
+
+### the plugin
+
+## python learning
+### the first
+
+### the second
+
+### the plugin
+## statistic
+### the first
+
+### the second
+
+### the plugin
+## hoping
+### the first
+
+### the second
+
+### the plugin
