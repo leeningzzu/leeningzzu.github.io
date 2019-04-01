@@ -8,20 +8,6 @@
     </url>
 
     <url>
-        <loc>https://github.com/leeningzzu/leeningzzu.github.io/categories/Software/</loc>
-        <lastmod>2019-04-01T02:49:41.346Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://github.com/leeningzzu/leeningzzu.github.io/categories/Software/Software-and-Skills/</loc>
-        <lastmod>2019-04-01T02:49:41.346Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://github.com/leeningzzu/leeningzzu.github.io/categories/Porgramming/</loc>
         <lastmod>2019-04-01T02:50:30.813Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -31,6 +17,20 @@
     <url>
         <loc>https://github.com/leeningzzu/leeningzzu.github.io/categories/Porgramming/test-blog/</loc>
         <lastmod>2019-04-01T02:50:30.813Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://github.com/leeningzzu/leeningzzu.github.io/categories/Software-and-Skills/</loc>
+        <lastmod>2019-04-01T03:59:08.354Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://github.com/leeningzzu/leeningzzu.github.io/categories/Software-and-Skills/github-blog-building/</loc>
+        <lastmod>2019-04-01T03:59:08.354Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
