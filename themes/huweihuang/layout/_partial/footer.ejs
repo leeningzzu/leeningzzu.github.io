@@ -79,6 +79,13 @@
                     style="border-width:0" /></ a>
                     Since 2019/01/01,
                     <span class="post-count"><%= totalcount(site) %> words altogether</span>
+					<!--总访问量统计-->
+                    <% if(config['busuanzi']) { %>
+                        <span id="busuanzi_container_site_pv" style="margin-left: 3px;">
+                            总访问量<span id="busuanzi_value_site_pv"></span>次
+                        </span>
+                    <% } %>
+                    <!--总访问量统计-->												 
                 </p>
                 
             </div>

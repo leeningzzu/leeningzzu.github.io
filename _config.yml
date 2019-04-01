@@ -67,6 +67,9 @@ valineGuestInfo: nick,mail,link # custom comment header
 valinePageSize: 10 # pagination size
 visitor: true
 
+# busuanzi
+busuanzi: true
+
 # Analytics settings
 # Baidu Analytics
 # ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
