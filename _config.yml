@@ -199,8 +199,10 @@ default_category: uncategorized
 category_map:
   Software and Skills: Software and Skills
   Programming: Programming
-  Theory: Theory
   Algorithm: Algorithm
+  Theory: Theory
+  Reading: Reading
+  
 tag_map:
 home_posts_tag: true # show posts tags
 
@@ -240,7 +242,7 @@ markdown:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: huweihuang
+theme: statlee
 plugins:
     hexo-generator-feed
 
