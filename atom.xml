@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/leeningzzu/leeningzzu.github.io/"/>
-  <updated>2019-04-05T11:40:25.568Z</updated>
+  <updated>2019-04-05T12:05:35.355Z</updated>
   <id>https://github.com/leeningzzu/leeningzzu.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo + github 博客搭建</title>
+    <link href="https://github.com/leeningzzu/leeningzzu.github.io/2018/11/01/Porgramming/test%20blog/github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <id>https://github.com/leeningzzu/leeningzzu.github.io/2018/11/01/Porgramming/test blog/github博客搭建/</id>
+    <published>2018-10-31T19:09:06.000Z</published>
+    <updated>2019-04-05T12:05:35.355Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="博客搭建">博客搭建</h2><p>主要参考<a href="https://zhuanlan.zhihu.com/p/35668237" target="_blank" rel="noopener">韦阳的博客</a></p><h3 id="采用hexo-或者其他方式">采用HEXO 或者其他方式</h3><h3 id="挑选主题">挑选主题</h3><h3 id="进行修改">进行修改</h3><h3 id="插件及优化">插件及优化</h3><p>主要参考<a href="https://blog.qizhenjun.com/75a7da42/" target="_blank" rel="noopener">Travis CI自动部署Hexo博客到GitHub</a>及<a href="https://www.itfanr.cc/2017/08/09/using-travis-ci-automatic-deploy-hexo-blogs/" target="_blank" rel="noopener">使用Travis CI自动部署Hexo博客</a></p><h2 id="推送新建博客">推送新建博客</h2><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">add</span> .</span><br><span class="line">git commit -m <span class="string">"new blog"</span></span><br><span class="line">git <span class="keyword">push</span></span><br></pre></td></tr></table></figure><h2 id="travis-ci自动部署">Travis CI自动部署</h2><p><a href="https://travis-ci.org/" target="_blank" rel="noopener">Travis CI</a>可见更新日志</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;博客搭建&quot;&gt;博客搭建&lt;/h2&gt;
+&lt;p&gt;主要参考&lt;a href=&quot;https://zhuanlan.zhihu.com/p/35668237&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;韦阳的博客&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;采用hexo-或
+      
+    
+    </summary>
+    
+    
+      <category term="github 使用技巧" scheme="https://github.com/leeningzzu/leeningzzu.github.io/tags/github-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo-toc test</title>
