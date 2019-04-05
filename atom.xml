@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/leeningzzu/leeningzzu.github.io/"/>
-  <updated>2019-04-01T03:59:08.354Z</updated>
+  <updated>2019-04-01T10:19:35.377Z</updated>
   <id>https://github.com/leeningzzu/leeningzzu.github.io/</id>
   
   <author>
@@ -15,35 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>hexo-toc test</title>
-    <link href="https://github.com/leeningzzu/leeningzzu.github.io/2018/11/01/hexo-toc%20test/"/>
-    <id>https://github.com/leeningzzu/leeningzzu.github.io/2018/11/01/hexo-toc test/</id>
-    <published>2018-10-31T19:09:06.000Z</published>
-    <updated>2019-04-01T03:59:08.354Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="building">building</h2><p>主要参考<a href="https://zhuanlan.zhihu.com/p/35668237" target="_blank" rel="noopener">韦阳的博客</a></p><h3 id="the-first">the first</h3><h3 id="the-second">the second</h3><h3 id="the-plugin">the plugin</h3><p>主要参考<a href="https://blog.qizhenjun.com/75a7da42/" target="_blank" rel="noopener">Travis CI自动部署Hexo博客到GitHub</a>及<a href="https://www.itfanr.cc/2017/08/09/using-travis-ci-automatic-deploy-hexo-blogs/" target="_blank" rel="noopener">使用Travis CI自动部署Hexo博客</a></p><h2 id="push-the-blog">push the blog</h2><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">add</span> .</span><br><span class="line">git commit -m <span class="string">"new blog"</span></span><br><span class="line">git <span class="keyword">push</span></span><br></pre></td></tr></table></figure><h3 id="the-first-v2">the first</h3><h3 id="the-second-v2">the second</h3><h3 id="the-plugin-v2">the plugin</h3><h2 id="travis-ci-building">Travis CI building</h2><p><a href="https://travis-ci.org/" target="_blank" rel="noopener">Travis CI</a>可见更新日志</p><h3 id="the-first-v3">the first</h3><h3 id="the-second-v3">the second</h3><h3 id="the-plugin-v3">the plugin</h3><h2 id="train">train</h2><h3 id="the-first-v4">the first</h3><h3 id="the-second-v4">the second</h3><h3 id="the-plugin-v4">the plugin</h3><h2 id="deep-learning">deep learning</h2><h3 id="the-first-v5">the first</h3><h3 id="the-second-v5">the second</h3><h3 id="the-plugin-v5">the plugin</h3><h2 id="machine-learning">machine learning</h2><h3 id="the-first-v6">the first</h3><h3 id="the-second-v6">the second</h3><h3 id="the-plugin-v6">the plugin</h3><h2 id="jave-learning">jave learning</h2><h3 id="the-first-v7">the first</h3><h3 id="the-second-v7">the second</h3><h3 id="the-plugin-v7">the plugin</h3><h2 id="r">R</h2><h3 id="the-first-v8">the first</h3><h3 id="the-second-v8">the second</h3><h3 id="the-plugin-v8">the plugin</h3><h2 id="python-learning">python learning</h2><h3 id="the-first-v9">the first</h3><h3 id="the-second-v9">the second</h3><h3 id="the-plugin-v9">the plugin</h3><h2 id="statistic">statistic</h2><h3 id="the-first-v10">the first</h3><h3 id="the-second-v10">the second</h3><h3 id="the-plugin-v10">the plugin</h3><h2 id="hoping">hoping</h2><h3 id="the-first-v11">the first</h3><h3 id="the-second-v11">the second</h3><h3 id="the-plugin-v11">the plugin</h3>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;building&quot;&gt;building&lt;/h2&gt;
-&lt;p&gt;主要参考&lt;a href=&quot;https://zhuanlan.zhihu.com/p/35668237&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;韦阳的博客&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;
-      
-    
-    </summary>
-    
-      <category term="Software and Skills" scheme="https://github.com/leeningzzu/leeningzzu.github.io/categories/Software-and-Skills/"/>
-    
-      <category term="github blog building" scheme="https://github.com/leeningzzu/leeningzzu.github.io/categories/Software-and-Skills/github-blog-building/"/>
-    
-    
-      <category term="test the contents" scheme="https://github.com/leeningzzu/leeningzzu.github.io/tags/test-the-contents/"/>
-    
-  </entry>
   
   <entry>
     <title>hexo + github 博客搭建</title>
@@ -71,6 +42,35 @@
     
     
       <category term="github 使用技巧" scheme="https://github.com/leeningzzu/leeningzzu.github.io/tags/github-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo-toc test</title>
+    <link href="https://github.com/leeningzzu/leeningzzu.github.io/2018/11/01/hexo-toc%20test/"/>
+    <id>https://github.com/leeningzzu/leeningzzu.github.io/2018/11/01/hexo-toc test/</id>
+    <published>2018-10-31T19:09:06.000Z</published>
+    <updated>2019-04-01T03:59:08.354Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="building">building</h2><p>主要参考<a href="https://zhuanlan.zhihu.com/p/35668237" target="_blank" rel="noopener">韦阳的博客</a></p><h3 id="the-first">the first</h3><h3 id="the-second">the second</h3><h3 id="the-plugin">the plugin</h3><p>主要参考<a href="https://blog.qizhenjun.com/75a7da42/" target="_blank" rel="noopener">Travis CI自动部署Hexo博客到GitHub</a>及<a href="https://www.itfanr.cc/2017/08/09/using-travis-ci-automatic-deploy-hexo-blogs/" target="_blank" rel="noopener">使用Travis CI自动部署Hexo博客</a></p><h2 id="push-the-blog">push the blog</h2><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">add</span> .</span><br><span class="line">git commit -m <span class="string">"new blog"</span></span><br><span class="line">git <span class="keyword">push</span></span><br></pre></td></tr></table></figure><h3 id="the-first-v2">the first</h3><h3 id="the-second-v2">the second</h3><h3 id="the-plugin-v2">the plugin</h3><h2 id="travis-ci-building">Travis CI building</h2><p><a href="https://travis-ci.org/" target="_blank" rel="noopener">Travis CI</a>可见更新日志</p><h3 id="the-first-v3">the first</h3><h3 id="the-second-v3">the second</h3><h3 id="the-plugin-v3">the plugin</h3><h2 id="train">train</h2><h3 id="the-first-v4">the first</h3><h3 id="the-second-v4">the second</h3><h3 id="the-plugin-v4">the plugin</h3><h2 id="deep-learning">deep learning</h2><h3 id="the-first-v5">the first</h3><h3 id="the-second-v5">the second</h3><h3 id="the-plugin-v5">the plugin</h3><h2 id="machine-learning">machine learning</h2><h3 id="the-first-v6">the first</h3><h3 id="the-second-v6">the second</h3><h3 id="the-plugin-v6">the plugin</h3><h2 id="jave-learning">jave learning</h2><h3 id="the-first-v7">the first</h3><h3 id="the-second-v7">the second</h3><h3 id="the-plugin-v7">the plugin</h3><h2 id="r">R</h2><h3 id="the-first-v8">the first</h3><h3 id="the-second-v8">the second</h3><h3 id="the-plugin-v8">the plugin</h3><h2 id="python-learning">python learning</h2><h3 id="the-first-v9">the first</h3><h3 id="the-second-v9">the second</h3><h3 id="the-plugin-v9">the plugin</h3><h2 id="statistic">statistic</h2><h3 id="the-first-v10">the first</h3><h3 id="the-second-v10">the second</h3><h3 id="the-plugin-v10">the plugin</h3><h2 id="hoping">hoping</h2><h3 id="the-first-v11">the first</h3><h3 id="the-second-v11">the second</h3><h3 id="the-plugin-v11">the plugin</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;building&quot;&gt;building&lt;/h2&gt;
+&lt;p&gt;主要参考&lt;a href=&quot;https://zhuanlan.zhihu.com/p/35668237&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;韦阳的博客&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;
+      
+    
+    </summary>
+    
+      <category term="Software and Skills" scheme="https://github.com/leeningzzu/leeningzzu.github.io/categories/Software-and-Skills/"/>
+    
+      <category term="github blog building" scheme="https://github.com/leeningzzu/leeningzzu.github.io/categories/Software-and-Skills/github-blog-building/"/>
+    
+    
+      <category term="test the contents" scheme="https://github.com/leeningzzu/leeningzzu.github.io/tags/test-the-contents/"/>
     
   </entry>
   
