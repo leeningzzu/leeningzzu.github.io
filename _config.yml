@@ -242,9 +242,14 @@ markdown:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: huweihuang
+theme: statlee
 plugins:
     hexo-generator-feed
+    
+#安装以文件目录分类插件    
+auto_dir_categorize:
+    enable: true  # options:true, false; default is true
+    force: true # options:true, false; default is false
 
 #Feed Atom
 feed:

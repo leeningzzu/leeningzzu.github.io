@@ -7,8 +7,8 @@ subtitle: github博客搭建
 header-img: 
 tags: github 使用技巧
 categories:
-- Porgramming
-- test blog
+- 
+- 
 ---
 ##  博客搭建
   主要参考[韦阳的博客](https://zhuanlan.zhihu.com/p/35668237)
