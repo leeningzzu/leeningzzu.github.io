@@ -18,7 +18,7 @@
         
     </title>
 
-    <link rel="canonical" href="https://github.com/leeningzzu/leeningzzu.github.io/tags/github-使用技巧/">
+    <link rel="canonical" href="https://github.com/leeningzzu/leeningzzu.github.io/categories/Programming/test-blog/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -73,8 +73,8 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('/undefined');
-            /*page*/
+            background-image: url('/img/header_img/category-bg.jpg');
+            /*category*/
         
     }
     
@@ -225,56 +225,25 @@
                 post-container
             ">
             
-                
-<div class="container">
+                <div class="container">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 archive">
             
-            <h2 class="archive-title tag">
-                github 使用技巧
+            <h2 class="archive-title category">
+                test blog
             </h2>
             
-                	
-
-                	
-                    <div class="archive-archive one-tag-list">	
-                        <span class="fa fa-calendar-times-o listing-seperator" id="2018">	
-                            <span class="tag-text">2018</span>	
-                        </span>
-                        <ul>	
-                        	
-                            <!-- <li class="listing-item">	
-                            <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>	
-                            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>	
-                            </li> -->	
-                            <li>	
-                                11-01	
-                                <i class="fa fa-angle-double-right" aria-hidden="true"></i>	
-                                <a href="/2018/11/01/hexo-toc test/" style="color: #0085a1">	
-                                    <span>	
-                                        hexo-toc test	
-                                    </span>	
-                                </a>	
-                                <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->	
-                            </li>
-                        	
-                            <!-- <li class="listing-item">	
-                            <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>	
-                            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>	
-                            </li> -->	
-                            <li>	
-                                11-01	
-                                <i class="fa fa-angle-double-right" aria-hidden="true"></i>	
-                                <a href="/2018/11/01/github博客搭建/" style="color: #0085a1">	
-                                    <span>	
-                                        hexo + github 博客搭建	
-                                    </span>	
-                                </a>	
-                                <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->	
-                            </li>
-                        
-                        </ul>
-                    </div>
+                <div class="archive-category">
+                    <ul>
+                    <!-- 这里使用 page.posts，因为应该是按照某一分类来获取文章，并不是获取所有分类 -->
+                    
+                        <li>
+                            <a href="/2018/11/01/github博客搭建/">hexo + github 博客搭建</a>
+                        </li>
+                    
+                    </ul>
+                </div>
+                <!-- 分页 -->
                 
             
         </div>
@@ -302,6 +271,8 @@
 }
 
 </style>
+
+
 
 
                 <!-- 如果开启评论功能 -->

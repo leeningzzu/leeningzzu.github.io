@@ -55,7 +55,7 @@
   background-color: transparent !important;
 }
 .toc-nav .active > a {
-  color: color-theme;
+  color: #f00;
 }
 .toc-nav-link {
   font-family: "futura-pt", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", Microsoft JhengHei, WenQuanYi Micro Hei, "Microsoft YaHei", sans-serif;
