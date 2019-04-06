@@ -71,7 +71,18 @@
 <body ontouchstart="">
 	<!-- Post Header -->
 <style type="text/css">
+    
+            html {
+                height:100%;
+            }
+            @media screen and (min-width:960px){ 
+				header.intro-header{height: 624px;}
+			}
+            /*post*/
+    
     header.intro-header{
+		position: relative;
+        width: 100%;
         
             background-image: url('');
             /*post*/
@@ -186,14 +197,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/categories/">Categories</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/categories/">Categories</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -276,7 +287,6 @@
 </div>
 									  													 
                 
-
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
@@ -289,7 +299,7 @@
                 </ul>
 
                 
-                 
+                
                     <div class="comments" id="comments"></div>
                 
                 
