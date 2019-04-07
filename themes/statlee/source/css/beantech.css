@@ -31,10 +31,12 @@
 }
 .sidebar-container .tags a {
   border-color: #bfbfbf;
+  color: gray;
 }
 .sidebar-container .tags a:hover,
 .sidebar-container .tags a:active {
   border-color: #0085a1;
+  color: #0085a1;
 }
 
 .sidebar-container .short-about img {

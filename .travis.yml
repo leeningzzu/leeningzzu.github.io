@@ -15,6 +15,8 @@ before_install:
 install: npm install
  
 script:
+    - yuque-hexo clean
+    - yuque-hexo sync
     - hexo clean # Çå³ý
     - hexo g # Éú³É
     

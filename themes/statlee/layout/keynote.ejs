@@ -56,6 +56,17 @@ layout: layout
                 post-container">
 
                 <%- page.content %>
+				
+				<!-- Featured Tags -->
+                <% if(config['featured-tags']) { %>
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="<%= config.root %>tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        <%- list_tags({style: '', class: '', show_count: false, separator: ''}) %>
+                    </div>
+                </section>
+                <% }%>
             </div>
 
             <!-- Sidebar Container Below -->

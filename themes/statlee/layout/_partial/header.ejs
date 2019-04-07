@@ -1,14 +1,5 @@
 <!-- Post Header -->
 <style type="text/css">
-    <%if (is_post()){%>
-            html {
-                height:100%;
-            }
-            @media screen and (min-width:960px){ 
-				header.intro-header{height: 624px;}
-			}
-            /*post*/
-    <%}%>
     header.intro-header{
         <% if (is_home()) { %>
             background-image: url('<%= config.root + config["header-img"] %>'); 

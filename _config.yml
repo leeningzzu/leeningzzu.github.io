@@ -14,7 +14,8 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url:  https://github.com/leeningzzu/leeningzzu.github.io       # Note: don't forget to modify the CNAME file to your url
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :year/:abbrlink.html
+# permalink: :year/:month/:day/:title/
 permalink_defaults:
 rss:  /atom.xml
 
@@ -22,7 +23,7 @@ rss:  /atom.xml
 menu:
   Home: /
   Archives: /archive
-  Categories: /categories
+  Categories and Tags: /categories
   Tags: /tags
   About: /about
   
@@ -32,7 +33,7 @@ menu:
 SEOTitle: Knowledge is Power
 email: leeningzzu@gmail.com
 description: ""
-keyword: ""
+keyword: 
 header-img: img/header_img/home-bg-dark.jpg
 signature: true #show signature
 signature-img: img/signature/signature-white.png
@@ -228,6 +229,13 @@ archive_generator:
 # Markdown-it config
 ## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
 markdown:
+  plugins:
+    - markdown-it-abbr
+    - markdown-it-footnote
+    - markdown-it-ins
+    - markdown-it-sub
+    - markdown-it-sup
+    - markdown-it-emoji
   render:
     html: true
     xhtmlOut: false
@@ -265,6 +273,6 @@ deploy:
   repository: git@github.com:leeningzzu/leeningzzu.github.io.git
   #repository: https://github.com/leeningzzu/leeningzzu.github.io
   branch: master
-                 
+  message: Update CNAME               
   
 
