@@ -14,8 +14,7 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url:  https://github.com/leeningzzu/leeningzzu.github.io       # Note: don't forget to modify the CNAME file to your url
 root: /
-permalink: :year/:abbrlink.html
-# permalink: :year/:month/:day/:title/
+permalink: :year/:month/:day/:title/
 permalink_defaults:
 rss:  /atom.xml
 
