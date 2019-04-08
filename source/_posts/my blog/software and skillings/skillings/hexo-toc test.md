@@ -8,7 +8,7 @@ header-img:
 tags: test the contents
 categories:
 - Software and Skillings
-- github blog building
+- skillings
 ---
 ##  building
   主要参考[韦阳的博客](https://zhuanlan.zhihu.com/p/35668237)

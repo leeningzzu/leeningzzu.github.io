@@ -1,0 +1,7 @@
+{
+  "files.defaultLanguage": "md",
+	"workbench.colorTheme": "Tomorrow_Night_Eighties",
+	"editor.fontFamily": "Hack",
+	"editor.fontSize": 16,
+	"terminal.integrated.shell.windows": "F:\\datascience\\git and github\\root\\Gitroot\\bin\\bash.exe"
+}
