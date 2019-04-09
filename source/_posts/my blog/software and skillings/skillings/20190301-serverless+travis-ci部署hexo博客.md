@@ -5,10 +5,10 @@ toc_nav_num: true
 date: 2019-03-01 03:09:06
 subtitle: github博客搭建
 header-img: 
-tags: blog
+tags: [blog,hexo]
 categories:
 - Software and Skillings
-- skillings
+- Skillings
 ---
 
 ## hexo + github构建

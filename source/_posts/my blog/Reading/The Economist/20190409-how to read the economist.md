@@ -5,7 +5,7 @@ toc_nav_num: true
 date: 2019-04-09 12:56:06
 subtitle: The method to master English
 header-img: 
-tags: Proficent in English
+tags: English Proficency
 categories:
 - Readings
 - The Economist
@@ -36,6 +36,6 @@ To be a learning animal, do not be an information hunger.
 - [ ] regional articles
 
 ## Persistence
-<p align="centre"><font color="#dd0000">three articles per week</font><br /></p>  
+<center><font color="#dd0000">Three articles per week</font><br /><center>
 
 Only persistence makes progress. Yeah, I believe I can execute the plan, just do it.
