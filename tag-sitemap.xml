@@ -3,15 +3,22 @@
 
 
     <url>
-        <loc>https://github.com/leeningzzu/leeningzzu.github.io/tags/blog/</loc>
-        <lastmod>2019-04-09T03:09:05.618Z</lastmod>
+        <loc>https://github.com/leeningzzu/leeningzzu.github.io/tags/English-Proficency/</loc>
+        <lastmod>2019-04-09T07:52:32.836Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://github.com/leeningzzu/leeningzzu.github.io/tags/Proficent-in-English/</loc>
-        <lastmod>2019-04-09T06:58:13.866Z</lastmod>
+        <loc>https://github.com/leeningzzu/leeningzzu.github.io/tags/blog/</loc>
+        <lastmod>2019-04-09T07:57:38.256Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://github.com/leeningzzu/leeningzzu.github.io/tags/hexo/</loc>
+        <lastmod>2019-04-09T07:57:38.256Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
