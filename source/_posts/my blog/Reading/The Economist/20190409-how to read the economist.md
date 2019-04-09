@@ -3,7 +3,7 @@ title: How to read The Economist
 catalog: true
 toc_nav_num: true
 date: 2019-04-09 12:56:06
-subtitle: the method to master English
+subtitle: The method to master English
 header-img: 
 tags: Proficent in English
 categories:
@@ -15,8 +15,9 @@ categories:
 > <p align="right">--陈善《扪虱新话》</p>
 
 ## How to read in proper way
-I have been reading The Economist since Nov 2018, but I did not feel I made some progress in writing and listening, there must something wrong,there should be the right way to open it.
-### What should I grasp
+I have been reading The Economist since Nov 2018, but I did not feel I made some progress in writing and listening, there must be something wrong,there should be the right way to open it.  
+
+**What should I grasp**
 
   * the editorial stance  
  > only when we get the real standpoint, can realize the value of the article
@@ -35,8 +36,6 @@ To be a learning animal, do not be an information hunger.
 - [ ] regional articles
 
 ## Persistence
-<font color="#dd0000">three articles per week</font><br />  
+<p align="centre"><font color="#dd0000">three articles per week</font><br /></p>  
 
 Only persistence makes progress. Yeah, I believe I can execute the plan, just do it.
-
-
