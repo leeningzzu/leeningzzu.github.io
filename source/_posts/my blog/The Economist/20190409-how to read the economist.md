@@ -7,7 +7,6 @@ subtitle: The method to master English
 header-img: 
 tags: English Proficency
 categories:
-- Readings
 - The Economist
 ---
 
