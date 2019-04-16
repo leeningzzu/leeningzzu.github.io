@@ -10,7 +10,8 @@ categories:
 - The Economist
 - 201904
 ---
-# <center>The promise and perils of synthetic biology<center>
+ <center>The promise and perils of synthetic biology<center>  
+
 ## paragraph 1
 > *Introduce the conventional point: gene mutation and natural selection*  
 >1. the theory  
