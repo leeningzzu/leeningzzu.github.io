@@ -3,13 +3,6 @@
 
 
     <url>
-        <loc>https://github.com/leeningzzu/leeningzzu.github.io/tags/English-Proficency/</loc>
-        <lastmod>2019-04-09T07:52:32.836Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://github.com/leeningzzu/leeningzzu.github.io/tags/blog/</loc>
         <lastmod>2019-04-09T07:57:38.256Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -19,6 +12,13 @@
     <url>
         <loc>https://github.com/leeningzzu/leeningzzu.github.io/tags/hexo/</loc>
         <lastmod>2019-04-09T07:57:38.256Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://github.com/leeningzzu/leeningzzu.github.io/tags/English-Proficency/</loc>
+        <lastmod>2019-04-16T03:43:56.087Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
