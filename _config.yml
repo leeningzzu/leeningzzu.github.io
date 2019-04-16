@@ -22,7 +22,7 @@ rss:  /atom.xml
 menu:
   Home: /
   Archives: /archive
-  Categories and Tags: /categories
+  Categories: /categories
   Tags: /tags
   About: /about
   
@@ -113,14 +113,15 @@ needmoreshare2:
 # Sidebar settings
 sidebar: true                       # whether or not using Sidebar.
 sidebar-about-description: "Just Show Me the Code 👉📜"
-sidebar-avatar: img/ironman-draw-1.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: img/ironman-draw-2.png      # use absolute URL, seeing it's used in both `/` and `/about/`
 widgets:
 - featured-tags
+- category
 - short-about
 - recent-posts
-- friends-blog
 - archive
-- category
+- friends-blog
+
 
 # widget behavior
 ## Archive
