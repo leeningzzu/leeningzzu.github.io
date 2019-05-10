@@ -8,8 +8,15 @@
     </url>
 
     <url>
-        <loc>https://github.com/leeningzzu/leeningzzu.github.io/categories/Software-and-Skillings/</loc>
-        <lastmod>2019-04-09T07:57:38.256Z</lastmod>
+        <loc>https://github.com/leeningzzu/leeningzzu.github.io/categories/The-Economist/201904/</loc>
+        <lastmod>2019-04-16T04:16:08.089Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://github.com/leeningzzu/leeningzzu.github.io/categories/The-Economist/</loc>
+        <lastmod>2019-04-16T04:16:08.089Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -22,15 +29,8 @@
     </url>
 
     <url>
-        <loc>https://github.com/leeningzzu/leeningzzu.github.io/categories/The-Economist/</loc>
-        <lastmod>2019-04-16T03:43:56.087Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://github.com/leeningzzu/leeningzzu.github.io/categories/The-Economist/201904/</loc>
-        <lastmod>2019-04-16T03:43:56.087Z</lastmod>
+        <loc>https://github.com/leeningzzu/leeningzzu.github.io/categories/Software-and-Skillings/</loc>
+        <lastmod>2019-04-09T07:57:38.256Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
