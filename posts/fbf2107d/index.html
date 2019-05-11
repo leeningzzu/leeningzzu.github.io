@@ -3,7 +3,7 @@
 
 <!-- Head tag -->
 <head><meta name="generator" content="Hexo 3.8.0">
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -63,13 +63,13 @@
     <!-- ga & ba script hoook -->
     <script></script>
 	<!--不蒜子-->
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>				
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->				
 </head>
 
 
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="">
-	<!-- Post Header -->
+	<!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- Post Header -->
 <style type="text/css">
     header.intro-header{
         
@@ -195,14 +195,14 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/categories/">Categories</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/categories/">Categories</a>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -270,7 +270,7 @@
 <li>[ ] 将tags与categories合并为一页显示</li>
 <li>[ ] 实现文章监听滚动功能</li>
 </ul>
-<p>注意事项： node的最新版本，以及hux博客的优化版本如<a href="https://github.com/CatherineLiyuankun/Hexo-theme-zilan">YuankunLi</a> and <a href="https://github.com/huweihuang/hexo-theme-huweihuang">huweihuang</a>。其中mathjax公式插件参考<a href="https://wudaijun.com/2017/12/hexo-with-mathjax/" target="_blank" rel="noopener">Hexo使用mathjax渲染公式</a></p>
+<p>注意事项： node的最新版本，以及hux博客的优化版本如<a href="https://github.com/CatherineLiyuankun/Hexo-theme-zilan">YuankunLi</a> and <a href="https://github.com/huweihuang/hexo-theme-huweihuang">huweihuang</a>。其中mathjax公式插件参考<a href="https://wudaijun.com/2017/12/hexo-with-mathjax/" target="_blank" rel="noopener">Hexo使用mathjax渲染公式</a><br>以及<a href="https://www.jianshu.com/p/68e6f82d88b7" target="_blank" rel="noopener">mathjax使用</a></p>
 <h2 id="travis-ci"><a href="#travis-ci" class="headerlink" title="travis-ci"></a>travis-ci</h2><p>主要参考<a href="https://blog.qizhenjun.com/75a7da42/" target="_blank" rel="noopener">Travis CI自动部署Hexo博客到GitHub</a>及<a href="https://www.itfanr.cc/2017/08/09/using-travis-ci-automatic-deploy-hexo-blogs/" target="_blank" rel="noopener">使用Travis CI自动部署Hexo博客</a><br>注意事项：创建一个新分支<strong>hexo</strong>用于存放未进行构建的源码，而<strong>master</strong>分支为作为构建后输出目录，<strong>travis.yml</strong>跟踪监听<strong>hexo</strong>分支，并推送github的<strong>master</strong>分支</p>
 <p><strong>git推送</strong><br><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"new blog"</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure></p>
 <h2 id="采用腾讯云serverless-语雀进行自动化部署"><a href="#采用腾讯云serverless-语雀进行自动化部署" class="headerlink" title="采用腾讯云serverless +语雀进行自动化部署"></a>采用腾讯云serverless +语雀进行自动化部署</h2><p>注意事项：</p>
@@ -568,7 +568,7 @@
                 <p class="copyright text-muted">
                     <a><img alt="web trackers" src="http://monster.gostats.com/bin/count/a_507303/t_6/i_1/counter.png" style="border-width:0"></a>
                     Since 2019/01/01,
-                    <span class="post-count">6k words altogether</span>
+                    <span class="post-count">7k words altogether</span>
 					<!--总访问量统计-->
                     
                         <span id="busuanzi_container_site_pv" style="margin-left: 3px;">
@@ -746,6 +746,22 @@
     
     <!-- Migrate from head to bottom, no longer block render and still work -->
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>--><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>

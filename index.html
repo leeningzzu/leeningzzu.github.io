@@ -3,7 +3,7 @@
 
 <!-- Head tag -->
 <head><meta name="generator" content="Hexo 3.8.0">
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -63,13 +63,13 @@
     <!-- ga & ba script hoook -->
     <script></script>
 	<!--不蒜子-->
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>				
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->				
 </head>
 
 
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="">
-	<!-- Post Header -->
+	<!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- Post Header -->
 <style type="text/css">
     header.intro-header{
         
@@ -160,14 +160,14 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/categories/">Categories</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/categories/">Categories</a>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -241,7 +241,7 @@
         <div class="post-content-preview">
             频率学派与贝叶斯学派频率学派与贝叶斯学派探讨「不确定性」这件事时的出发点与立足点不同。
 
-频率学派认为世界是确定的，试图直接为「事件」本身建模，即事件在多次独立重复试验中发生的频率趋于极限p那么这个极限就是该事件的概率。他们认为模型参数是确定的未知变量，希望通过类似方程组的方式从数据中求解。频率学派在对总体参数进行点估计时常采用的两种方式：矩估计和最大似然估计(Maximum Likelih......
+频率学派认为世界是确定的，试图直接为「事件」本身建模，即事件在多次独立重复试验中发生的频率趋于极限$p$那么这个极限就是该事件的概率。他们认为模型参数是确定形式的一个未知变量，希望通过类似方程组的方式从数据中求解。频率学派在对总体参数进行点估计时常采用的两种方式：矩估计和最大似然估计(Maximum L......
         </div>
     </a>
 
@@ -722,7 +722,7 @@ How to read in proper wayI have been reading The Economist since Nov 2018, but I
                 <p class="copyright text-muted">
                     <a><img alt="web trackers" src="http://monster.gostats.com/bin/count/a_507303/t_6/i_1/counter.png" style="border-width:0"></a>
                     Since 2019/01/01,
-                    <span class="post-count">6k words altogether</span>
+                    <span class="post-count">7k words altogether</span>
 					<!--总访问量统计-->
                     
                         <span id="busuanzi_container_site_pv" style="margin-left: 3px;">
@@ -900,6 +900,22 @@ How to read in proper wayI have been reading The Economist since Nov 2018, but I
     
     <!-- Migrate from head to bottom, no longer block render and still work -->
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>--><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>
