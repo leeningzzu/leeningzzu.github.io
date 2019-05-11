@@ -8,6 +8,20 @@
     </url>
 
     <url>
+        <loc>https://github.com/leeningzzu/leeningzzu.github.io/categories/Theory/Mathematical-statistics/</loc>
+        <lastmod>2019-05-11T03:54:52.265Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://github.com/leeningzzu/leeningzzu.github.io/categories/Theory/</loc>
+        <lastmod>2019-05-11T03:54:52.265Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://github.com/leeningzzu/leeningzzu.github.io/categories/Software-and-Skillings/Skillings/</loc>
         <lastmod>2019-05-11T03:31:52.547Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -17,20 +31,6 @@
     <url>
         <loc>https://github.com/leeningzzu/leeningzzu.github.io/categories/Software-and-Skillings/</loc>
         <lastmod>2019-05-11T03:31:52.547Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://github.com/leeningzzu/leeningzzu.github.io/categories/Theory/Mathematical-statistics/</loc>
-        <lastmod>2019-05-11T03:29:26.272Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://github.com/leeningzzu/leeningzzu.github.io/categories/Theory/</loc>
-        <lastmod>2019-05-11T03:29:26.272Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

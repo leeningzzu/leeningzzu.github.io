@@ -3,6 +3,13 @@
 
 
     <url>
+        <loc>https://github.com/leeningzzu/leeningzzu.github.io/tags/Bayes-principles/</loc>
+        <lastmod>2019-05-11T03:54:52.265Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://github.com/leeningzzu/leeningzzu.github.io/tags/hexo/</loc>
         <lastmod>2019-05-11T03:31:52.547Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -12,13 +19,6 @@
     <url>
         <loc>https://github.com/leeningzzu/leeningzzu.github.io/tags/blog/</loc>
         <lastmod>2019-05-11T03:31:52.547Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://github.com/leeningzzu/leeningzzu.github.io/tags/Bayes-principles/</loc>
-        <lastmod>2019-05-11T03:29:26.272Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
