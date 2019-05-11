@@ -14,8 +14,12 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url:  https://github.com/leeningzzu/leeningzzu.github.io       # Note: don't forget to modify the CNAME file to your url
 root: /
-permalink: :year/:month/:day/:title/
-permalink_defaults:
+# permalink: :year/:month/:day/:title/
+# permalink_defaults:
+permalink: posts/:abbrlink/
+abbrlink:
+  alg: crc32  #support crc16(default) and crc32
+  rep: hex    #support dec(default) and hex
 rss:  /atom.xml
 
 # Header
@@ -229,13 +233,8 @@ archive_generator:
 # Markdown-it config
 ## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
 markdown:
-  plugins:
-    - markdown-it-abbr
-    - markdown-it-footnote
-    - markdown-it-ins
-    - markdown-it-sub
-    - markdown-it-sup
-    - markdown-it-emoji
+
+  
   render:
     html: true
     xhtmlOut: false
@@ -246,6 +245,14 @@ markdown:
   anchors:
     level: 1
     permalinkSymbol: ''
+    
+
+# MathJax Support
+math.mathjax:
+  enable: true
+  per_page: true
+  #cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
+  cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
