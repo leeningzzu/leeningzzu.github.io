@@ -2,12 +2,13 @@
 title: How to read The Economist
 catalog: true
 toc_nav_num: true
-date: 2019-04-09 12:56:06
 subtitle: The method to master English
-header-img: 
 tags: English Proficency
 categories:
-- The Economist
+  - The Economist
+abbrlink: e1de756f
+date: 2019-04-09 12:56:06
+header-img:
 ---
 
 > 读书须知出入法。始当求所以入，终当求所以出。见得亲切，此是入书法；用得透脱，此是出书法。盖不能入得书，则不知古人用心处；不能出得书，则又死在言下。唯知出知入，得尽读书之法也.  

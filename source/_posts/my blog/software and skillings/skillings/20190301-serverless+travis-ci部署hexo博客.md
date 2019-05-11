@@ -2,13 +2,16 @@
 title: serverless+travis-ci部署hexo博客
 catalog: true
 toc_nav_num: true
-date: 2019-03-01 03:09:06
 subtitle: github博客搭建
-header-img: 
-tags: [blog,hexo]
+tags:
+  - blog
+  - hexo
 categories:
-- Software and Skillings
-- Skillings
+  - Software and Skillings
+  - Skillings
+abbrlink: fbf2107d
+date: 2019-03-01 03:09:06
+header-img:
 ---
 
 ## hexo + github构建

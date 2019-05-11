@@ -2,13 +2,14 @@
 title: The promise and perils of synthetic biology
 catalog: true
 toc_nav_num: true
-date: 2019-04-11 
 subtitle: Redesigning life
-header-img: 
 tags: English Proficency
 categories:
-- The Economist
-- 201904
+  - The Economist
+  - 201904
+abbrlink: c3a61103
+date: 2019-04-11 00:00:00
+header-img:
 ---
  <center>The promise and perils of synthetic biology<center>  
 
