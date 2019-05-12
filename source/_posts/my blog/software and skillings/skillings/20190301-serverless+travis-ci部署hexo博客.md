@@ -25,7 +25,7 @@ header-img:
 - [ ] 实现文章监听滚动功能
 
 注意事项： node的最新版本，以及hux博客的优化版本如[YuankunLi](https://github.com/CatherineLiyuankun/Hexo-theme-zilan) and [huweihuang](https://github.com/huweihuang/hexo-theme-huweihuang)。其中mathjax公式插件参考[Hexo使用mathjax渲染公式](https://wudaijun.com/2017/12/hexo-with-mathjax/)
-
+以及[mathjax使用](https://www.jianshu.com/p/68e6f82d88b7)
 ## travis-ci
 主要参考[Travis CI自动部署Hexo博客到GitHub](https://blog.qizhenjun.com/75a7da42/)及[使用Travis CI自动部署Hexo博客](https://www.itfanr.cc/2017/08/09/using-travis-ci-automatic-deploy-hexo-blogs/)<br />注意事项：创建一个新分支**hexo**用于存放未进行构建的源码，而**master**分支为作为构建后输出目录，**travis.yml**跟踪监听**hexo**分支，并推送github的**master**分支
 
