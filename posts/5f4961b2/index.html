@@ -259,15 +259,15 @@
                 <h2 id="频率学派与贝叶斯学派"><a href="#频率学派与贝叶斯学派" class="headerlink" title="频率学派与贝叶斯学派"></a>频率学派与贝叶斯学派</h2><p>频率学派与贝叶斯学派探讨「不确定性」这件事时的出发点与立足点不同。</p>
 <ol>
 <li>频率学派认为世界是<strong>确定</strong>的，试图直接为「事件」本身建模，即事件在多次独立重复试验中发生的频率趋于极限$p$那么这个极限就是该事件的概率。<br>他们认为<em>模型参数是确定形式的一个未知变量</em>，希望通过类似方程组的方式从数据中求解。频率学派在对总体参数进行点估计时常采用的两种方式：矩估计和<strong>最大似然估计</strong>(Maximum Likelihood Estimation,MLE)，其中最大似然估计应用广泛，在<em>大样本量下</em>估计较好。<script type="math/tex; mode=display">
-\theta_{M L E}=\operatorname{argmax}_{\theta} p(data | \theta)
+\theta_{M L E}=\operatorname{argmax}_{\theta} p(D | \theta)
 \tag{1.1}</script></li>
-<li>贝叶斯学派认为世界是<strong>不确定</strong>的，因获取的信息不同而异。从「观察者」角度出发，假设对事件有一个预先估计，通过获取的信息不断调整之前的预估计。同一件事情，由于观察者知识的不完备，所认为的事件状态也不同。<br>他们认为<em>模型参数服从某种潜在分布的随机变量</em>，希望从数据中推知该分布。对于数据的观测方式不同或者假设不同，那么推知的该参数也会因此而存在差异。这就是贝叶斯派视角下用来估计参数的常用方法-<strong>最大后验概率估计</strong>（Maximum A Posteriori Estimation，MAP），这种方法在先验假设比较靠谱的情况下效果显著，随着数据量的增加，先验假设对于模型参数的主导作用会逐渐削弱，真实的数据样例会占据有利地位。极端情况下，比如把先验假设去掉，或者假设先验满足均匀分布的话，那和极大似然估计就如出一辙了。<script type="math/tex; mode=display">
-\theta_{M A P}=\operatorname{argmax}_{\theta} p(data | \theta) p(\theta)
+<li>贝叶斯学派认为世界是<strong>不确定</strong>的，因获取的信息不同而异。从「观察者」角度出发，假设对事件有一个预先估计，通过获取的信息不断调整之前的预估计。同一件事情，由于观察者知识的不完备，所认为的事件状态也不同。<br>他们认为<em>模型参数服从某种潜在分布的随机变量</em>，希望从数据中推知该分布。基本思路是：假定要估计的模型参数是服从一定分布的随机变量，根据经验给出待估参数的先验分布（也称为主观分布），关于这些先验分布的信息被称为先验信息；然后根据这些先验信息，并与样本信息相结合，应用贝叶斯定理求出待估参数的后验分布；再应用损失函数，得出后验分布的一些特征值，并把它们作为待估参数的估计量。<strong>最大后验概率估计</strong>（Maximum A Posteriori Estimation，MAP），在先验假设比较靠谱的情况下效果显著，随着数据量的增加，先验假设对于模型参数的主导作用会逐渐削弱，真实的数据样例会占据有利地位。极端情况下，比如把先验假设去掉，或者假设先验满足均匀分布的话，那和极大似然估计就如出一辙了。<script type="math/tex; mode=display">
+\theta_{M A P}=\operatorname{argmax}_{\theta} p(D | \theta) p(\theta)
 \tag{1.2}</script>频率学派的代表是采用类条件概率密度进行最大似然估计；贝叶斯学派的代表是采用后验概率进行最大后验概率估计。两者都属于参数的点估计，MAP可看作对先验和MLE的折衷，数据量足够大时，两者趋于一致。  </li>
 </ol>
 <p>贝叶斯估计是MAP的进一步扩展，贝叶斯估计同样假定模型参数是一个随机变量，但并不是直接估计出参数的某个特定值，而是<strong>估计参数的分布</strong>，这是贝叶斯估计与最大后验概率估计不同的地方。</p>
 <blockquote>
-<p>三种方法对比</p>
+<p>方法对比</p>
 <ol>
 <li>模型选择：①计算复杂度：MLE简单微分运算，贝叶斯估计需要复杂多重积分，较难理解 ②准确性：小样本时贝叶斯框架允许通过新的数据获得的似然更新成为新的先验、并再次获得一个新后验，迭代循环更新。其估计误差更小。  </li>
 <li>参数化估计的局限：MLE依赖所假设的概率分布正确性，贝叶斯推理依赖先验信息的正确性。  </li>
@@ -285,14 +285,14 @@ P\left(A_{i} | B\right)=\frac{P\left(B | A_{i}\right) P\left(A_{i}\right)}{P(B)}
 <p>贝叶斯定理的意义在于使我们能利用已有的知识或信念（通常称为先验的）帮助计算相关事件的概率。    </p>
 </blockquote>
 <p>在贝叶斯统计中，<strong>先验概率</strong>分布是在没有获得某些新的信息前对$P(\theta)$的不确定性猜测进行量化，可量化为一个参数或一个潜在变量。其不仅依赖于主观经验估计，也依据已有经验知识进行推断。通常将先验概率乘以似然函数再归一化后，即得到参数的后验概率分布，后验概率分布是在给定数据下，$P(\theta)$的分布. </p>
-<p>转化成数据与参数的角度思考贝叶斯定理：<br>$\theta$代表感兴趣的事件，为参数的集合，data代表所观察到的特定数据集合</p>
+<p>转化成数据与参数的角度思考贝叶斯定理：<br>$\theta$代表感兴趣的事件，为参数的集合，$D$ 代表所观察到的特定数据集合</p>
 <script type="math/tex; mode=display">
-\underbrace{P(\theta | \text { data })}_{\text { Posterior probability } }=\underbrace{P(\theta)}_{\text { Prior probability } } \times \underbrace{\frac{ {\overbrace{P(\text { data } | \theta)}^{\text { Likelihood function } } } } {\underbrace{P(\text { data })}_{\text { Standardized constant } } }  }_{\text { Standardized likelihood(updating prior)  } }=\underbrace{\frac{P\left(\text { data } |\theta_{i}\right) P\left(\theta_{i}\right)} {\sum_{i=1}^{n} P\left(\text { data } | \theta_{i}\right) P\left(\theta_{i}\right)} }_{\text { total class-conditional probability } }
+\underbrace{P(\theta | D )}_{\text { Posterior probability } }=\underbrace{P(\theta)}_{\text { Prior probability } } \times \underbrace{\frac{ {\overbrace{P(D  | \theta)}^{\text { Likelihood function } } } } {\underbrace{P(D )}_{\text { Standardized constant } } }  }_{\text { Standardized likelihood(updating prior)  } }
  \tag{2}</script><ul>
 <li>$P(\theta)$为$\theta$的<em>先验概率</em>，代表我们根据经验或知识所相信的</li>
-<li>$P(\text {data}| \theta)$,为在已知$\theta$下$\text { data }$发生的类条件概率 </li>
-<li>$P(\theta| \text {data})$为$\theta$的<em>后验概率</em>，即已知$\text { data }$下$\theta$的条件概率，这里称似然度</li>
-<li>$P(\text {data})$为数据的先验概率  </li>
+<li>$P(D | \theta)$,为在已知$\theta$下$D$发生的类条件概率 </li>
+<li>$P(\theta|D )$为$\theta$的<em>后验概率</em>，即已知$D$下$\theta$的条件概率，这里称似然度</li>
+<li>$P(D)$为数据的先验概率，又称标化常量 </li>
 </ul>
 <p><strong>贝叶斯定理</strong>：指在概率统计中利用所观察到的现象或新获得的信息对有关概率分布的先验概率进行修正的方法，当样本量充分大时，样本中事件发生的概率将接近于总体中事件发生概率。</p>
 <blockquote>
@@ -302,19 +302,20 @@ P\left(A_{i} | B\right)=\frac{P\left(B | A_{i}\right) P\left(A_{i}\right)}{P(B)}
 <p>Probability attaches to possible results; likelihood attaches to hypotheses.<br>The results to which probabilities attach are mutually exclusive and exhaustive; the hypotheses to which likelihoods attach are often neither; the range in one hypothesis may include the point in another.<sup><a href="#fn_1" id="reffn_1">1</a></sup>  </p>
 </blockquote>
 <h3 id="似然与概率"><a href="#似然与概率" class="headerlink" title="似然与概率"></a>似然与概率</h3><p>似然和概率同指事件发生的可能性，但在数理统计中含义不同，似然是贝叶斯统计的基石。<br>概率描述给定模型参数后，数据可能的结果，其概率之和为1.<br>似然描述给定特定观测值(数据)后，参数为随机变量，似然之和可能大于1.<br><strong>抛硬币试验</strong><sup><a href="#fn_2" id="reffn_2">2</a></sup><br>采用R的二项分布函数进行抛硬币试验，考虑参数：抛掷硬币次数，预测正面朝上的成功次数，预测正面朝上的成功的概率。<br><strong>概率</strong>：假定服从二项分布，已知参数：抛掷硬币次数=10，预测正面朝上的成功的概率=0.5，预测正面朝上的成功次数为随机变量<br><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">barplot(</span><br><span class="line">  dbinom(x = <span class="number">0</span>:<span class="number">10</span>, size = <span class="number">10</span>, prob = <span class="number">0.5</span>),</span><br><span class="line">  names.arg = <span class="number">0</span>:<span class="number">10</span>,</span><br><span class="line">  ylab=<span class="string">"Probability"</span>,</span><br><span class="line">  xlab=<span class="string">"Number of successes"</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://wx3.sinaimg.cn/large/e775c73agy1g2wl3kuqnvj20dq0dkweo.jpg" alt="画出不同预测成功次数的概率图"><br><strong>似然</strong>：已知参数：抛掷硬币次数=10，预测正面朝上的成功次数=8，预测正面朝上的成功的概率为随机变量<br><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">curve(</span><br><span class="line">  dbinom(<span class="number">8</span>,<span class="number">10</span>,x), xlim = c(<span class="number">0</span>,<span class="number">1</span>),</span><br><span class="line">  ylab=<span class="string">"Likelihood"</span>,</span><br><span class="line">  xlab=expression(paste(<span class="string">"Binomial "</span>, rho)),</span><br><span class="line">)</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://wx3.sinaimg.cn/large/e775c73agy1g2wl3kuqnvj20dq0dkweo.jpg" alt="画出不同预测成功次数的概率图">  </p>
+<p><strong>似然</strong>：已知参数：抛掷硬币次数=10，预测正面朝上的成功次数=8，预测正面朝上的成功的概率为随机变量<br><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">curve(</span><br><span class="line">  dbinom(<span class="number">8</span>,<span class="number">10</span>,x), xlim = c(<span class="number">0</span>,<span class="number">1</span>),</span><br><span class="line">  ylab=<span class="string">"Likelihood"</span>,</span><br><span class="line">  xlab=expression(paste(<span class="string">"Binomial "</span>, rho)),</span><br><span class="line">)</span><br></pre></td></tr></table></figure></p>
 <p><img src="http://wx1.sinaimg.cn/large/e775c73agy1g2wlfompg9j20de0c9q3a.jpg" alt="画出成功概率$p$的似然"></p>
 <h3 id="似然函数与概率函数"><a href="#似然函数与概率函数" class="headerlink" title="似然函数与概率函数"></a>似然函数与概率函数</h3><p>对于</p>
-<script type="math/tex; mode=display">P(data | \theta)</script><ol>
-<li>如果$\theta$已知，$data$是变量，则称概率函数(probability function)，描述<strong>不同样本</strong>$data$出现的概率。</li>
-<li>如果$\theta$为变量，$data$已知，则称似然函数(likelihood function), 描述对于<strong>不同的模型参数</strong>$\theta$下，$data$这个样本点出现的概率，也可记作$L(\theta | data)$或$L(data ; \theta)$或$f(data ; \theta)$。(似然函数的不同写法)<h3 id="推理公式"><a href="#推理公式" class="headerlink" title="推理公式"></a>推理公式</h3></li>
+<script type="math/tex; mode=display">P(D | \theta)</script><ol>
+<li>如果$\theta$已知，$D$是变量，则称概率函数(probability function)，描述<strong>不同样本</strong>$D$出现的概率。</li>
+<li>如果$\theta$为变量，$D$已知，则称似然函数(likelihood function), 描述对于<strong>不同的模型参数</strong>$\theta$下，$D$这个样本点出现的概率，也可记作$L(\theta |D)$或$L(D ; \theta)$或$f(D ; \theta)$。(似然函数的不同写法)<h3 id="推理公式"><a href="#推理公式" class="headerlink" title="推理公式"></a>推理公式</h3></li>
 </ol>
 <p>对离散函数 </p>
-<script type="math/tex; mode=display">\mathcal{L}(\theta | d a t a)=P(d a t a | \theta)</script><p>对连续函数</p>
-<script type="math/tex; mode=display">\mathcal{L}(\theta | d a t a)=f(d a t a | \theta)</script><blockquote>
+<script type="math/tex; mode=display">{L}(\theta |D)=P(D| \theta)</script><p>对连续函数</p>
+<script type="math/tex; mode=display">{L}(\theta |D)=f(D| \theta)</script><blockquote>
 <ol>
 <li>给定参数后数据的概率等于给定数据后参数的似然度。</li>
-<li>问题角度不同：一个是关于参数值：在给定data后，参数取特定值的似然度；一个关于数据：在给定参数条件下，观察到data的概率。   </li>
+<li>问题角度不同：一个是关于参数值：在给定D后，参数取特定值的似然度；一个关于数据：在给定参数条件下，观察到D的概率。   </li>
 </ol>
 <p><strong>注</strong>：1. 连续条件下似然函数不是概率密度函数，其积分和不为1，该似然函数指给定数据条件下参数值的概率，其与数据无关  </p>
 </blockquote>
@@ -322,29 +323,29 @@ P\left(A_{i} | B\right)=\frac{P\left(B | A_{i}\right) P\left(A_{i}\right)}{P(B)}
 <p>模型选择与参数估计时，单个似然值无意义，似然是在比较中进行解释的 <sup><a href="#fn_3" id="reffn_3">3</a></sup>，<sup><a href="#fn_4" id="reffn_4">4</a></sup>  </p>
 </blockquote>
 <p>${H}_{0}:\theta=\theta_{0}$  </p>
-<p>${H}_{1}:\theta$具有先验分布$P(\theta | \mathcal{H}_{1})$。并可依据新data信息运用bayes原理更新$P(\mathcal{H}_{1})/P(\mathcal{H}_{0})$。  </p>
+<p>${H}_{1}:\theta$具有先验分布$P(\theta |{H}_{1})$。并可依据新data信息运用bayes原理更新$P({H}_{1})/P({H}_{0})$。  </p>
 <p>在${H}_{0}$条件下，贝叶斯因子=似然比   </p>
 <p>在${H}_{1}$条件下，相当于加权似然比，部分反映后验信息中，样本信息在三种信息（总体、先验、样本）中所起作用    </p>
 <p>Bayes factor=1,代表样本信息无作用，先验信息准确<br>Bayes factor&gt;1,支持${H}_{1}$，样本信息更新了先验信息<br>Bayes factor&lt;1,支持${H}_{0}$，  </p>
 <script type="math/tex; mode=display">
-\underbrace{\frac{P\left(\mathcal{H}_{1} | \text { data }\right)} {P\left(\mathcal{H}_{0} | \text { data }\right)} }_{\text { Posterior uncertainty } }=\underbrace{\frac{P\left(\mathcal{H}_{1}\right)} {P\left(\mathcal{H}_{0}\right)} }_{\text { Prior uncertainty } } \times \underbrace{\frac{P\left(\text { data } | \mathcal{H}_{1}\right)} {P\left(\text { data } | \mathcal{H}_{0}\right)} }_{\text { updating factor } }</script><h2 id="极大似然估计（MLE）"><a href="#极大似然估计（MLE）" class="headerlink" title="极大似然估计（MLE）"></a>极大似然估计（MLE）</h2><p>在实际问题中我们仅能获得有限样本数据，而先验概率和类条件概率未知。先验概率分布可依据经验知识或训练样本中各类的频率进行估计。而直接估计类条件概率的密度函数很难，<font color="#dd0000">极大似然估计将概率密度$p(\text { data }| \theta_{i})$转化为估计参数。</font><br><br><strong>前提</strong>：  </p>
+\underbrace{\frac{P\left({H}_{1} |{D}\right)} {P\left({H}_{0} |D\right)} }_{\text { Posterior uncertainty } }=\underbrace{\frac{P\left({H}_{1}\right)} {P\left({H}_{0}\right)} }_{\text { Prior uncertainty } } \times \underbrace{\frac{P\left(D |{H}_{1}\right)} {P\left(D| {H}_{0}\right)} }_{\text { updating factor } }</script><h2 id="极大似然估计（MLE）"><a href="#极大似然估计（MLE）" class="headerlink" title="极大似然估计（MLE）"></a>极大似然估计（MLE）</h2><p>在实际问题中我们仅能获得有限样本数据，而先验概率和类条件概率未知。先验概率分布可依据经验知识或训练样本中各类的频率进行估计。而直接估计类条件概率的密度函数很难，<font color="#dd0000">极大似然估计将概率密度$p(D| \theta_{i})$转化为估计参数。</font><br><br><strong>前提</strong>：  </p>
 <ol>
 <li>样本分布代表其真实分布</li>
-<li>样本集$data=\left\{x_{1}, x_{2}, x_{3}, \dots, x_{n}\right\}$中样本$x_{i}$满足独立同分布的随机变量(iid条件)</li>
-<li>训练样本足够<br><strong>目的</strong>：利用已知样本结果，反推最大概率导致该结果的参数值。 <strong><em>模型已定，参数未知</em></strong><br><strong>核心思想</strong>：极大似然估计认为参数为固有的，但可能由于噪音干扰，存在误差。但只要在给定数据情况下，找到导致该结果概率最大的参数值即可，<font color="#dd0000">其实质为条件概率求最大解，即求使得$P(\theta|data )$最大的参数值$\theta$。</font><br>。</li>
+<li>样本集$D=\left\{x_{1}, x_{2}, x_{3}, \dots, x_{n}\right\}$中样本$x_{i}$满足独立同分布的随机变量(iid条件)</li>
+<li>训练样本足够<br><strong>目的</strong>：利用已知样本结果，反推最大概率导致该结果的参数值。 <strong><em>模型已定，参数未知</em></strong><br><strong>核心思想</strong>：极大似然估计认为参数为固有的，但可能由于噪音干扰，存在误差。但只要在给定数据情况下，找到导致该结果概率最大的参数值即可，<font color="#dd0000">其实质为条件概率求最大解，即求使得$P(\theta|D )$最大的参数值$\theta$。</font><br>。</li>
 </ol>
 <p>由贝叶斯公式可知</p>
 <script type="math/tex; mode=display">
-P(\theta | d a t a) \propto P(d a t a | \theta) \times P(\theta)</script><p>即可转化为</p>
+P(\theta | D) \propto P(D | \theta) \times P(\theta)</script><p>即可转化为</p>
 <script type="math/tex; mode=display">
-\operatorname{argmax}_{\theta} P(\theta|data ){\Rightarrow}\operatorname{argmax}_{\theta} P(data | \theta)</script><h3 id="MLE模型推导"><a href="#MLE模型推导" class="headerlink" title="MLE模型推导"></a>MLE模型推导</h3><p>由全概率公式得</p>
+\operatorname{argmax}_{\theta} p(\theta|D ){\Rightarrow}\operatorname{argmax}_{\theta} p(D| \theta)</script><h3 id="MLE模型推导"><a href="#MLE模型推导" class="headerlink" title="MLE模型推导"></a>MLE模型推导</h3><p>由全概率公式得</p>
 <script type="math/tex; mode=display">
-\underbrace{l(\theta|data)=P(data | \theta)}_{\text {Likehood function}}=P\left(x_{1}, x_{2}, \cdots, x_{N} | \theta\right)=\prod_{i=1}^{N} p\left(x_{i} | \theta\right)</script><p>式中的$P(data | \theta)$即为似然函数，因最终求解的为似然最大的参数值，所以称似然估计。</p>
+\underbrace{l(\theta|D)=p(D| \theta)}_{\text {Likehood function}}=p\left(x_{1}, x_{2}, \cdots, x_{N} | \theta\right)=\prod_{i=1}^{N} p\left(x_{i} | \theta\right)</script><p>式中的$P(D| \theta)$即为似然函数，因最终求解的为似然最大的参数值，所以称似然估计。</p>
 <h4 id="对数似然函数-拉普拉斯修正"><a href="#对数似然函数-拉普拉斯修正" class="headerlink" title="对数似然函数(拉普拉斯修正)"></a>对数似然函数(拉普拉斯修正)</h4><p>为防止先验概率为0导致似然函数为0，以及多先验概率相乘可能出现的下溢出，引入拉普拉斯修正。</p>
 <script type="math/tex; mode=display">
-{L}(\theta | data)=\ln \mathrm{L}(\theta | data)=\sum_{i=1}^{n} \ln p\left(x_{i} | \theta\right)</script><p>即求解</p>
+{L}(\theta | D)=\ln {l}(\theta |D)=\sum_{i=1}^{n} \ln p\left(x_{i} | \theta\right)</script><p>即求解</p>
 <script type="math/tex; mode=display">
-\hat{\theta}=\arg \max _{\theta} L(\theta | data)</script><h4 id="MLE一般步骤5"><a href="#MLE一般步骤5" class="headerlink" title="MLE一般步骤5"></a>MLE一般步骤<sup><a href="#fn_5" id="reffn_5">5</a></sup></h4><ol>
+\hat{\theta}=\arg \max _{\theta} L(\theta | D)</script><h4 id="MLE一般步骤5"><a href="#MLE一般步骤5" class="headerlink" title="MLE一般步骤5"></a>MLE一般步骤<sup><a href="#fn_5" id="reffn_5">5</a></sup></h4><ol>
 <li>写出似然函数；</li>
 <li>对似然函数取对数，并整理；</li>
 <li>求导数</li>
@@ -367,29 +368,41 @@ p(\xi)=\frac{1}{\sigma \sqrt{2 \pi}} \exp \left\{-\frac{\xi^{2}}{2 \sigma^{2}}\r
 L^{*}(\alpha)=-\frac{1}{2 \sigma^{2}} \sum_{i=1}^{\ell}\left(y_{i}-f\left(x_{i}, \alpha\right)\right)^{2}-\ell \ln (\sqrt{2 \pi} \sigma)</script><p>即最大化$L^{*}(\alpha)$等于最小化最小二乘估计函数</p>
 <script type="math/tex; mode=display">
 M(\alpha)=\sum_{i=1}^{\ell}\left(y_{i}-f\left(x_{i}, \alpha\right)\right)^{2}</script><h2 id="最大后验估计-MAP"><a href="#最大后验估计-MAP" class="headerlink" title="最大后验估计(MAP)"></a>最大后验估计(MAP)</h2><p><strong>目的</strong>： 最大化在给定数据样本情况下模型参数的后验概率<br><strong>核心思想</strong>：可将MAP看作正则化的MLE，引入模型参数先验假设，不再仅依靠数据样本。当$\theta$为均匀分布时，MLE与MAP等价。</p>
-<p>相比MLE，MAP引入了先验概率$P(\theta)$：MLE从频率学派视角将$\theta$看作固定未知值，使得似然函数$P(data | \theta)$最大的参数即为最好的$\theta$；MAP从贝叶斯学派的观点出发，将$\theta$看作随机变量，其具有某种概率分布，即先验分布，认为应考虑$\theta$的先验分布$P(\theta)$，最大化函数为$P(data | \theta)P(\theta)$。由于$P(data)$可通过分析数据所得，则</p>
+<p>相比MLE，MAP引入了先验概率$P(\theta)$：MLE从频率学派视角将$\theta$看作固定未知值，使得似然函数$P(D| \theta)$最大的参数即为最好的$\theta$；MAP从贝叶斯学派的观点出发，将$\theta$看作随机变量，其具有某种概率分布，即先验分布，认为应考虑$\theta$的先验分布$P(\theta)$，最大化函数为$P(D | \theta)P(\theta)$。由于$P(D)$可通过分析数据所得，则</p>
 <script type="math/tex; mode=display">
-\underset{\theta}{\operatorname{argmax} } P(\theta | data)=\underset{\theta}{\operatorname{argmax} } \frac{P(data | \theta) P(\theta)}{P(data)} \propto \underset{\theta}{\operatorname{argmax} } P(data | \theta) P(\theta)=\underset{\theta}{\operatorname{argmax} } \sum_{i=1}^{n} \ln p\left(x_{i} | \theta\right)+ \ln p(\theta)</script><h3 id="MAP一般步骤7"><a href="#MAP一般步骤7" class="headerlink" title="MAP一般步骤7"></a>MAP一般步骤<sup><a href="#fn_7" id="reffn_7">7</a></sup></h3><ol>
+\underset{\theta}{\operatorname{argmax} } p(\theta |D)=\underset{\theta}{\operatorname{argmax} } \frac{p(D | \theta) p(\theta)}{p(D)} \propto \underset{\theta}{\operatorname{argmax} } p(D | \theta) p(\theta)=\underset{\theta}{\operatorname{argmax} } \sum_{i=1}^{n} \ln p\left(x_{i} | \theta\right)+ \ln p(\theta)</script><h3 id="MAP特点"><a href="#MAP特点" class="headerlink" title="MAP特点"></a>MAP特点</h3><h4 id="共轭分布"><a href="#共轭分布" class="headerlink" title="共轭分布"></a>共轭分布</h4><p>在贝叶斯统计中，如果后验分布与先验分布属于同类，则二者为共轭分布，而先验分布被称为似然函数的共轭先验。</p>
+<h4 id="Beta-分布"><a href="#Beta-分布" class="headerlink" title="$Beta$分布"></a>$Beta$分布</h4><p>$Beta$是指定义在(0,1)区间的连续概率分布，有两个参数$\alpha, \beta&gt;0$.对于$X \sim B (\alpha, \beta)$，其概率密度为：</p>
+<script type="math/tex; mode=display">\begin{aligned} f(x ; \alpha, \beta) &=\frac{x^{\alpha-1}(1-x)^{\beta-1} }{\int_{0}^{1} \mu^{\alpha-1}(1-\mu)^{\beta-1} d \mu} \\ &=\frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha) \Gamma(\beta)} x^{\alpha-1}(1-x)^{\beta-1} \\ &=\frac{1}{B(\alpha, \beta)} x^{\alpha-1}(1-x)^{\beta-1} \end{aligned}</script><ol>
+<li>当采用$Beta$分布描述先验概率时，可通过调节$\alpha, \beta$变化成各种形状，其足以表达事先对$\theta$的估计。</li>
+<li>当采用$p(\theta) \sim B(\alpha, \beta)$，其后验概率分布$p(\theta|D )$亦服从$Beta$分布，使得贝叶斯分析得到简化。<blockquote>
+<p>对任何指数家族成员，都存在一个共轭先验。对给定的概率分布$p(\theta|D )$，可寻求一个与该似然函数$p(D | \theta)$共轭的先验分布$p(\theta)$。 随着数据量的增加，先验假设的影响也会相应减弱。   </p>
+<h3 id="MAP一般步骤7"><a href="#MAP一般步骤7" class="headerlink" title="MAP一般步骤7"></a>MAP一般步骤<sup><a href="#fn_7" id="reffn_7">7</a></sup></h3></blockquote>
+</li>
 <li>确定参数的先验分布以及似然函数；</li>
 <li>确定参数的后验分布函数</li>
 <li>将后验分布函数取对数，并整理；</li>
 <li>求导数</li>
-<li>求对数函数的最大值（求导，解方程）  </li>
+<li>求对数函数的最大值（求导，解方程）<h2 id="贝叶斯估计-Bayesian-Estimation"><a href="#贝叶斯估计-Bayesian-Estimation" class="headerlink" title="贝叶斯估计(Bayesian Estimation)"></a>贝叶斯估计(Bayesian Estimation)</h2>与MAP相比，贝叶斯估计同样假设$\theta$为一个随机变量，但并不直接估计出某个特定值，而是估计$\theta$的分布。<br><strong>贝叶斯估计的本质</strong><br>通过贝叶斯决策得到参数$\theta$的最优估计，使得总期望风险最小<h3 id="贝叶斯估计原理"><a href="#贝叶斯估计原理" class="headerlink" title="贝叶斯估计原理"></a>贝叶斯估计原理</h3></li>
+<li>依据全概率公式：  <script type="math/tex; mode=display">
+p(D)=\int_{\Theta} p(D | \theta) p(\theta) d \theta</script></li>
+<li>样本服从iid条件，则样本集联合分布为：  <script type="math/tex; mode=display">
+p(D | \theta)=\prod_{i=1}^{n} p\left(x_{i} | \theta\right)</script></li>
+<li><p>带入贝叶斯公式可得$\theta$的后验概率分布</p>
+<script type="math/tex; mode=display">
+p(\theta | D)=\frac{\left(\prod_{i=1}^{n} p\left(x_{i} | \theta\right)\right) p(\theta)}{\int_{\Theta}\left(\prod_{i=1}^{n} p\left(x_{i} | \theta\right)\right) p(\theta) d \theta}</script><ol>
+<li>贝叶斯估计量：<script type="math/tex; mode=display">
+\hat{\theta}=\int_{\Theta} \theta p(\theta | D) d \theta</script>通过样本概率密度函数$p(x_{i}|D)$在所有可能的参数取值$\hat{\theta}_{i}$下加权平均为观测样本下估计出的参数$\theta$的后验概率。</li>
 </ol>
-<h3 id="MAP特点"><a href="#MAP特点" class="headerlink" title="MAP特点"></a>MAP特点</h3><h4 id="共轭分布"><a href="#共轭分布" class="headerlink" title="共轭分布"></a>共轭分布</h4><p>在贝叶斯统计中，如果后验分布与先验分布属于同类，则二者为共轭分布，而先验分布被称为似然函数的共轭先验。</p>
-<h4 id="Beta-分布"><a href="#Beta-分布" class="headerlink" title="$Beta$分布"></a>$Beta$分布</h4><p>$Beta$是指定义在(0,1)区间的连续概率分布，有两个参数$\alpha, \beta&gt;0$.对于$X \sim B (\alpha, \beta)$，其概率密度为：</p>
-<script type="math/tex; mode=display">\begin{aligned} f(x ; \alpha, \beta) &=\frac{x^{\alpha-1}(1-x)^{\beta-1} }{\int_{0}^{1} \mu^{\alpha-1}(1-\mu)^{\beta-1} d \mu} \\ &=\frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha) \Gamma(\beta)} x^{\alpha-1}(1-x)^{\beta-1} \\ &=\frac{1}{B(\alpha, \beta)} x^{\alpha-1}(1-x)^{\beta-1} \end{aligned}</script><ol>
-<li>当采用$Beta$分布描述先验概率时，可通过调节$\alpha, \beta$变化成各种形状，其足以表达事先对$\theta$的估计。</li>
-<li>当采用$p(\theta) \sim B(\alpha, \beta)$，其后验概率分布$p(\theta|data )$亦服从$Beta$分布，使得贝叶斯分析得到简化。<blockquote>
-<p>对任何指数家族成员，都存在一个共轭先验。对给定的概率分布p(\theta|data )，可寻求一个与该似然函数$p(data | \theta)$共轭的先验分布$p(\theta)$。 随着数据量的增加，先验假设的影响也会相应减弱。   </p>
-</blockquote>
 </li>
 </ol>
-<h2 id="贝叶斯估计-Bayesian-Estimation"><a href="#贝叶斯估计-Bayesian-Estimation" class="headerlink" title="贝叶斯估计(Bayesian Estimation)"></a>贝叶斯估计(Bayesian Estimation)</h2><p>与MAP相比，贝叶斯估计同样假设$\theta$为一个随机变量，但并不直接估计出某个特定值，而是估计$\theta$的分布。</p>
 <h3 id="Bayesian-Estimation特点"><a href="#Bayesian-Estimation特点" class="headerlink" title="Bayesian Estimation特点"></a>Bayesian Estimation特点</h3><ol>
 <li>MLE与MAP直接估计参数值，而贝叶斯估计则是估计参数分布。</li>
-<li>MAP在计算后验概率时，忽略了$p(data)$，贝叶斯估计时不可忽略。</li>
-<li>贝叶斯估计的目的为计算整个后验概率的概率分布</li>
+<li>MAP在计算后验概率时，忽略了$p(D)$，贝叶斯估计时不可忽略。</li>
+<li>贝叶斯估计的目的为计算整个后验概率的概率分布<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><strong>贝叶斯方法与经典估计方法比较</strong> <sup><a href="#fn_8" id="reffn_8">8</a></sup> </li>
+<li><strong>参数解释</strong>：经典估计方法如最小二乘估计、最大似然估计和广义矩估计均认为待估参数$\theta$为未知确定值，其估计量$\hat{\theta}$才存在随机性，如果$\hat{\theta}$无偏，则该$E{\hat{\theta} }= \theta$；而贝叶斯方法认为参数$\theta$为服从某分布的随机变量。</li>
+<li><strong>利用信息程度</strong>：经典方法仅利用了样本信息，贝叶斯方法同时利用先验信息。</li>
+<li><strong>随机误差</strong>：经典方法除最大似然法，在参数估计过程中不要求随机误差项的具体分布形式，但在假设检验与区间估计时需要；贝叶斯方法需要知道随机误差项的具体分布形式。</li>
+<li><strong>参数估计量准则</strong>：经典估计方法以残差平方和最小或者以似然函数值最大为准则，构造极值条件，求解参数估计量；贝叶斯方法则需要构造一个损失函数，并以损失函数最小化为准则求得参数估计量。</li>
 </ol>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><blockquote id="fn_1">
 <sup>1</sup>. <a href="https://www.psychologicalscience.org/observer/bayes-for-beginners-probability-and-likelihood" target="_blank" rel="noopener">Bayes for Beginners: Probability and Likelihood</a><a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
@@ -411,6 +424,9 @@ M(\alpha)=\sum_{i=1}^{\ell}\left(y_{i}-f\left(x_{i}, \alpha\right)\right)^{2}</s
 </blockquote>
 <blockquote id="fn_7">
 <sup>7</sup>. <a href="http://noahsnail.com/2018/05/17/2018-05-17-%E8%B4%9D%E5%8F%B6%E6%96%AF%E4%BC%B0%E8%AE%A1%E3%80%81%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1%E3%80%81%E6%9C%80%E5%A4%A7%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87%E4%BC%B0%E8%AE%A1/" target="_blank" rel="noopener">贝叶斯估计、最大似然估计、最大后验概率估计</a><a href="#reffn_7" title="Jump back to footnote [7] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_8">
+<sup>8</sup>. <a href="https://blog.csdn.net/zhangxueyang1/article/details/54176141" target="_blank" rel="noopener">贝叶斯定理与贝叶斯估计</a><a href="#reffn_8" title="Jump back to footnote [8] in the text."> &#8617;</a>
 </blockquote>
 
 				<!-- Featured Tags -->
@@ -461,7 +477,7 @@ M(\alpha)=\sum_{i=1}^{\ell}\left(y_{i}-f\left(x_{i}, \alpha\right)\right)^{2}</s
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#频率学派与贝叶斯学派"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">频率学派与贝叶斯学派</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Bayes-theorem"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Bayes theorem</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#条件概率"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">条件概率</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#全概率公式"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">全概率公式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#贝叶斯公式"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">贝叶斯公式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#贝叶斯法则"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">贝叶斯法则</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Likelihood-vs-Probability"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Likelihood vs Probability</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#似然与概率"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">似然与概率</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#似然函数与概率函数"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">似然函数与概率函数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#推理公式"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">推理公式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#贝叶斯因子（Bayes-factor）"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">贝叶斯因子（Bayes factor）</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#极大似然估计（MLE）"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">极大似然估计（MLE）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#MLE模型推导"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">MLE模型推导</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#对数似然函数-拉普拉斯修正"><span class="toc-nav-number">4.1.1.</span> <span class="toc-nav-text">对数似然函数(拉普拉斯修正)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#MLE一般步骤5"><span class="toc-nav-number">4.1.2.</span> <span class="toc-nav-text">MLE一般步骤5</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#MLE特点"><span class="toc-nav-number">4.1.3.</span> <span class="toc-nav-text">MLE特点</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#最小二乘参数估计"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">最小二乘参数估计</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#最大后验估计-MAP"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">最大后验估计(MAP)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#MAP一般步骤7"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">MAP一般步骤7</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#MAP特点"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">MAP特点</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#共轭分布"><span class="toc-nav-number">5.2.1.</span> <span class="toc-nav-text">共轭分布</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Beta-分布"><span class="toc-nav-number">5.2.2.</span> <span class="toc-nav-text">$Beta$分布</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#贝叶斯估计-Bayesian-Estimation"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">贝叶斯估计(Bayesian Estimation)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Bayesian-Estimation特点"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">Bayesian Estimation特点</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#References"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">References</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#频率学派与贝叶斯学派"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">频率学派与贝叶斯学派</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Bayes-theorem"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Bayes theorem</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#条件概率"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">条件概率</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#全概率公式"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">全概率公式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#贝叶斯公式"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">贝叶斯公式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#贝叶斯法则"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">贝叶斯法则</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Likelihood-vs-Probability"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Likelihood vs Probability</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#似然与概率"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">似然与概率</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#似然函数与概率函数"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">似然函数与概率函数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#推理公式"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">推理公式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#贝叶斯因子（Bayes-factor）"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">贝叶斯因子（Bayes factor）</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#极大似然估计（MLE）"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">极大似然估计（MLE）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#MLE模型推导"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">MLE模型推导</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#对数似然函数-拉普拉斯修正"><span class="toc-nav-number">4.1.1.</span> <span class="toc-nav-text">对数似然函数(拉普拉斯修正)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#MLE一般步骤5"><span class="toc-nav-number">4.1.2.</span> <span class="toc-nav-text">MLE一般步骤5</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#MLE特点"><span class="toc-nav-number">4.1.3.</span> <span class="toc-nav-text">MLE特点</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#最小二乘参数估计"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">最小二乘参数估计</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#最大后验估计-MAP"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">最大后验估计(MAP)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#MAP特点"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">MAP特点</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#共轭分布"><span class="toc-nav-number">5.1.1.</span> <span class="toc-nav-text">共轭分布</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Beta-分布"><span class="toc-nav-number">5.1.2.</span> <span class="toc-nav-text">$Beta$分布</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#MAP一般步骤7"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">MAP一般步骤7</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#贝叶斯估计-Bayesian-Estimation"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">贝叶斯估计(Bayesian Estimation)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#贝叶斯估计原理"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">贝叶斯估计原理</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Bayesian-Estimation特点"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">Bayesian Estimation特点</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#总结"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">总结</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#References"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">References</span></a></li></ol>
         
         </div>
       </aside>
@@ -688,7 +704,7 @@ M(\alpha)=\sum_{i=1}^{\ell}\left(y_{i}-f\left(x_{i}, \alpha\right)\right)^{2}</s
                 <p class="copyright text-muted">
                     <a><img alt="web trackers" src="http://monster.gostats.com/bin/count/a_507303/t_6/i_1/counter.png" style="border-width:0"></a>
                     Since 2019/01/01,
-                    <span class="post-count">7k words altogether</span>
+                    <span class="post-count">7.5k words altogether</span>
 					<!--总访问量统计-->
                     
                         <span id="busuanzi_container_site_pv" style="margin-left: 3px;">
