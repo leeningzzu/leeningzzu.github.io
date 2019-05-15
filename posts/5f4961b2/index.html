@@ -259,11 +259,9 @@
                 <h2 id="频率学派与贝叶斯学派"><a href="#频率学派与贝叶斯学派" class="headerlink" title="频率学派与贝叶斯学派"></a>频率学派与贝叶斯学派</h2><p>频率学派与贝叶斯学派探讨「不确定性」这件事时的出发点与立足点不同。</p>
 <ol>
 <li>频率学派认为世界是<strong>确定</strong>的，试图直接为「事件」本身建模，即事件在多次独立重复试验中发生的频率趋于极限$p$那么这个极限就是该事件的概率。<br>他们认为<em>模型参数是确定形式的一个未知变量</em>，希望通过类似方程组的方式从数据中求解。频率学派在对总体参数进行点估计时常采用的两种方式：矩估计和<strong>最大似然估计</strong>(Maximum Likelihood Estimation,MLE)，其中最大似然估计应用广泛，在<em>大样本量下</em>估计较好。<script type="math/tex; mode=display">
-\theta_{M L E}=\operatorname{argmax}_{\theta} p(D | \theta)
-\tag{1.1}</script></li>
+\theta_{M L E}=\operatorname{argmax}_{\theta} p(D | \theta)</script></li>
 <li>贝叶斯学派认为世界是<strong>不确定</strong>的，因获取的信息不同而异。从「观察者」角度出发，假设对事件有一个预先估计，通过获取的信息不断调整之前的预估计。同一件事情，由于观察者知识的不完备，所认为的事件状态也不同。<br>他们认为<em>模型参数服从某种潜在分布的随机变量</em>，希望从数据中推知该分布。基本思路是：假定要估计的模型参数是服从一定分布的随机变量，根据经验给出待估参数的先验分布（也称为主观分布），关于这些先验分布的信息被称为先验信息；然后根据这些先验信息，并与样本信息相结合，应用贝叶斯定理求出待估参数的后验分布；再应用损失函数，得出后验分布的一些特征值，并把它们作为待估参数的估计量。<strong>最大后验概率估计</strong>（Maximum A Posteriori Estimation，MAP），在先验假设比较靠谱的情况下效果显著，随着数据量的增加，先验假设对于模型参数的主导作用会逐渐削弱，真实的数据样例会占据有利地位。极端情况下，比如把先验假设去掉，或者假设先验满足均匀分布的话，那和极大似然估计就如出一辙了。<script type="math/tex; mode=display">
-\theta_{M A P}=\operatorname{argmax}_{\theta} p(D | \theta) p(\theta)
-\tag{1.2}</script>频率学派的代表是采用类条件概率密度进行最大似然估计；贝叶斯学派的代表是采用后验概率进行最大后验概率估计。两者都属于参数的点估计，MAP可看作对先验和MLE的折衷，数据量足够大时，两者趋于一致。  </li>
+\theta_{M A P}=\operatorname{argmax}_{\theta} p(D | \theta) p(\theta)</script>频率学派的代表是采用类条件概率密度进行最大似然估计；贝叶斯学派的代表是采用后验概率进行最大后验概率估计。两者都属于参数的点估计，MAP可看作对先验和MLE的折衷，数据量足够大时，两者趋于一致。  </li>
 </ol>
 <p>贝叶斯估计是MAP的进一步扩展，贝叶斯估计同样假定模型参数是一个随机变量，但并不是直接估计出参数的某个特定值，而是<strong>估计参数的分布</strong>，这是贝叶斯估计与最大后验概率估计不同的地方。</p>
 <blockquote>
@@ -287,12 +285,11 @@ P\left(A_{i} | B\right)=\frac{P\left(B | A_{i}\right) P\left(A_{i}\right)}{P(B)}
 <p>在贝叶斯统计中，<strong>先验概率</strong>分布是在没有获得某些新的信息前对$P(\theta)$的不确定性猜测进行量化，可量化为一个参数或一个潜在变量。其不仅依赖于主观经验估计，也依据已有经验知识进行推断。通常将先验概率乘以似然函数再归一化后，即得到参数的后验概率分布，后验概率分布是在给定数据下，$P(\theta)$的分布. </p>
 <p>转化成数据与参数的角度思考贝叶斯定理：<br>$\theta$代表感兴趣的事件，为参数的集合，$D$ 代表所观察到的特定数据集合</p>
 <script type="math/tex; mode=display">
-\underbrace{P(\theta | D )}_{\text { Posterior probability } }=\underbrace{P(\theta)}_{\text { Prior probability } } \times \underbrace{\frac{ {\overbrace{P(D  | \theta)}^{\text { Likelihood function } } } } {\underbrace{P(D )}_{\text { Standardized constant } } }  }_{\text { Standardized likelihood(updating prior)  } }
- \tag{2}</script><ul>
+\underbrace{P(\theta | D )}_{\text { Posterior probability } }=\underbrace{P(\theta)}_{\text { Prior probability } } \times \underbrace{\frac{ {\overbrace{P(D  | \theta)}^{\text { Likelihood function } } } } {\underbrace{P(D )}_{\text { Standardized constant } } }  }_{\text { Standardized likelihood(updating prior)  } }</script><ul>
 <li>$P(\theta)$为$\theta$的<em>先验概率</em>，代表我们根据经验或知识所相信的</li>
 <li>$P(D | \theta)$,为在已知$\theta$下$D$发生的类条件概率 </li>
 <li>$P(\theta|D )$为$\theta$的<em>后验概率</em>，即已知$D$下$\theta$的条件概率，这里称似然度</li>
-<li>$P(D)$为数据的先验概率，又称标化常量 </li>
+<li>$P(D)$为数据分布，又称标化常量 </li>
 </ul>
 <p><strong>贝叶斯定理</strong>：指在概率统计中利用所观察到的现象或新获得的信息对有关概率分布的先验概率进行修正的方法，当样本量充分大时，样本中事件发生的概率将接近于总体中事件发生概率。</p>
 <blockquote>
@@ -332,7 +329,7 @@ P\left(A_{i} | B\right)=\frac{P\left(B | A_{i}\right) P\left(A_{i}\right)}{P(B)}
 <ol>
 <li>样本分布代表其真实分布</li>
 <li>样本集$D=\left\{x_{1}, x_{2}, x_{3}, \dots, x_{n}\right\}$中样本$x_{i}$满足独立同分布的随机变量(iid条件)</li>
-<li>训练样本足够<br><strong>目的</strong>：利用已知样本结果，反推最大概率导致该结果的参数值。 <strong><em>模型已定，参数未知</em></strong><br><strong>核心思想</strong>：极大似然估计认为参数为固有的，但可能由于噪音干扰，存在误差。但只要在给定数据情况下，找到导致该结果概率最大的参数值即可，<font color="#dd0000">其实质为条件概率求最大解，即求使得$P(\theta|D )$最大的参数值$\theta$。</font><br>。</li>
+<li>训练样本足够<br><strong>目的</strong>：利用已知样本结果，反推最大概率导致该结果的参数值。 <strong><em>模型已定，参数未知</em></strong><br><strong>核心思想</strong>：极大似然估计认为参数为固有的，但可能由于噪音干扰，存在误差。但只要在给定数据情况下，找到导致该结果概率最大的参数值即可，<font color="#dd0000">其实质为条件概率求最大解，即求使得$P(\theta|D )$最大的参数值$\theta$。</font><br></li>
 </ol>
 <p>由贝叶斯公式可知</p>
 <script type="math/tex; mode=display">
@@ -394,16 +391,19 @@ p(D)=\int_{\Theta} p(D | \theta) p(\theta) d \theta</script></li>
 p(D | \theta)=\prod_{i=1}^{n} p\left(x_{i} | \theta\right)</script></li>
 <li><p>带入贝叶斯公式可得$\theta$的后验概率分布</p>
 <script type="math/tex; mode=display">
-p(\theta | D)=\frac{\left(\prod_{i=1}^{n} p\left(x_{i} | \theta\right)\right) p(\theta)}{\int_{\Theta}\left(\prod_{i=1}^{n} p\left(x_{i} | \theta\right)\right) p(\theta) d \theta}</script><ol>
-<li>贝叶斯估计量：<script type="math/tex; mode=display">
-\hat{\theta}=\int_{\Theta} \theta p(\theta | D) d \theta</script>通过样本概率密度函数$p(x_{i}|D)$在所有可能的参数取值$\hat{\theta}_{i}$下加权平均为观测样本下估计出的参数$\theta$的后验概率。</li>
-</ol>
+p(\theta | D)=\frac{\left(\prod_{i=1}^{n} p\left(x_{i} | \theta\right)\right) p(\theta)}{\int_{\Theta}\left(\prod_{i=1}^{n} p\left(x_{i} | \theta\right)\right) p(\theta) d \theta}</script></li>
+<li><p>采用平方损失函数时，贝叶斯估计量：</p>
+<script type="math/tex; mode=display">
+\hat{\theta}=\int_{\Theta} \theta p(\theta | D) d \theta</script><p>通过样本概率密度函数$p(x_{i}|D)$在所有可能的参数取值$\hat{\theta}_{i}$下加权平均为观测样本下估计出的参数$\theta$的后验概率。</p>
 </li>
 </ol>
 <h3 id="Bayesian-Estimation特点"><a href="#Bayesian-Estimation特点" class="headerlink" title="Bayesian Estimation特点"></a>Bayesian Estimation特点</h3><ol>
 <li>MLE与MAP直接估计参数值，而贝叶斯估计则是估计参数分布。</li>
 <li>MAP在计算后验概率时，忽略了$p(D)$，贝叶斯估计时不可忽略。</li>
-<li>贝叶斯估计的目的为计算整个后验概率的概率分布<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><strong>贝叶斯方法与经典估计方法比较</strong> <sup><a href="#fn_8" id="reffn_8">8</a></sup> </li>
+<li>贝叶斯估计的目的为计算整个后验概率的概率分布  </li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p><strong>贝叶斯方法与经典估计方法比较</strong> <sup><a href="#fn_8" id="reffn_8">8</a></sup> </p>
+<ol>
 <li><strong>参数解释</strong>：经典估计方法如最小二乘估计、最大似然估计和广义矩估计均认为待估参数$\theta$为未知确定值，其估计量$\hat{\theta}$才存在随机性，如果$\hat{\theta}$无偏，则该$E{\hat{\theta} }= \theta$；而贝叶斯方法认为参数$\theta$为服从某分布的随机变量。</li>
 <li><strong>利用信息程度</strong>：经典方法仅利用了样本信息，贝叶斯方法同时利用先验信息。</li>
 <li><strong>随机误差</strong>：经典方法除最大似然法，在参数估计过程中不要求随机误差项的具体分布形式，但在假设检验与区间估计时需要；贝叶斯方法需要知道随机误差项的具体分布形式。</li>
